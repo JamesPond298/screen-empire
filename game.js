@@ -3,7 +3,7 @@
 
   const SAVE_KEY = 'screenEmpireSave';
   const BACKUP_KEY = 'screenEmpireSaveBackup';
-  const SAVE_VERSION = 1;
+  const SAVE_VERSION = 2;
   const money = value => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(value);
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
   const esc = value => String(value ?? '').replace(/[&<>'"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
@@ -36,7 +36,63 @@
       Movie: { Small: 180000, Medium: 340000, Large: 600000 },
       'TV Season': { Small: 220000, Medium: 420000, Large: 720000 }
     },
-    marketing: { Lean: 15000, Standard: 40000, Strong: 80000 }
+    marketing: { Lean: 15000, Standard: 40000, Strong: 80000 },
+    titles: {
+      Comedy: {
+        Movie: {
+          curated: ['An Unscheduled Wedding', 'Plus One Too Many', 'The Accidental Roommate', 'Dinner with the Wrong Family', 'A Minor Mix-Up', 'Weekend of Errors'],
+          templates: [
+            { pattern: 'The {thing} Mix-Up', words: { thing: ['Birthday', 'Babysitter', 'Honeymoon', 'Reservation', 'Roommate', 'Reunion'] } },
+            { pattern: '{number} Days to {event}', words: { number: ['Three', 'Five', 'Seven'], event: ['Move Out', 'Make Up', 'Save the Wedding', 'Meet the Parents'] } },
+            { pattern: 'My {relation} Is {problem}', words: { relation: ['Neighbor', 'Boss', 'Best Friend', 'Landlord'], problem: ['Missing', 'Engaged', 'Moving In', 'Definitely Lying'] } }
+          ]
+        },
+        'TV Season': {
+          curated: ['Neighbors on Notice', 'The Shared Kitchen', 'Second Best Friends', 'Room for Everyone', 'Office Hours', 'Across the Hall'],
+          templates: [
+            { pattern: '{place} People', words: { place: ['Corner Office', 'Cul-de-Sac', 'Downtown', 'Upstairs', 'Weekend'] } },
+            { pattern: 'The {group} Next Door', words: { group: ['Family', 'Roommates', 'Newlyweds', 'Regulars'] } },
+            { pattern: '{place} Rules', words: { place: ['House', 'Break Room', 'Neighborhood', 'Family', 'Apartment'] } }
+          ]
+        }
+      },
+      Drama: {
+        Movie: {
+          curated: ['The House We Left', 'Letters from Bellweather', 'A Quiet Distance', 'The Shape of Memory', 'Where the River Ends', 'After the Long Winter'],
+          templates: [
+            { pattern: 'The {place} Between Us', words: { place: ['Road', 'River', 'Room', 'Silence', 'Years'] } },
+            { pattern: '{memory} in {place}', words: { memory: ['Echoes', 'Letters', 'Shadows', 'Summer'], place: ['Bellweather', 'Greyhaven', 'North County', 'the Orchard'] } },
+            { pattern: 'When We {action}', words: { action: ['Came Home', 'Said Goodbye', 'Remembered', 'Were Young'] } }
+          ]
+        },
+        'TV Season': {
+          curated: ['Westbridge', 'Harbor County', 'The Long Return', 'Ashford House', 'Northline', 'Inheritance'],
+          templates: [
+            { pattern: '{place}', words: { place: ['Bellweather', 'Greyhaven', 'Eastmere', 'Cedar Hollow', 'Stonebridge'] } },
+            { pattern: 'The {family} Family', words: { family: ['Mercer', 'Holloway', 'Bennett', 'Vale', 'Sutton'] } },
+            { pattern: '{theme} Street', words: { theme: ['Mercy', 'Memory', 'Promise', 'Willow', 'Harbor'] } }
+          ]
+        }
+      },
+      Action: {
+        Movie: {
+          curated: ['Operation Nightfall', 'Final Pursuit', 'The Red Directive', 'Zero Hour Run', 'Blackout Protocol', 'Last Exit North'],
+          templates: [
+            { pattern: 'Operation {code}', words: { code: ['Firebreak', 'Iron Tide', 'Northstar', 'Silent Echo', 'Wildfire'] } },
+            { pattern: '{threat} Protocol', words: { threat: ['Blackout', 'Deadlock', 'Nightfall', 'Redline', 'Stormfront'] } },
+            { pattern: 'The {place} Pursuit', words: { place: ['Border', 'Midnight', 'Northern', 'Rooftop', 'Coastal'] } }
+          ]
+        },
+        'TV Season': {
+          curated: ['Frontier Unit', 'Redline Division', 'Night Watch Command', 'Strike Point', 'The Response Team', 'Shadow Detail'],
+          templates: [
+            { pattern: '{code} Unit', words: { code: ['Atlas', 'Frontier', 'Northstar', 'Sentinel', 'Vanguard'] } },
+            { pattern: '{threat} Division', words: { threat: ['Blackout', 'Critical', 'Redline', 'Storm', 'Tactical'] } },
+            { pattern: 'Task Force {code}', words: { code: ['Echo', 'Firebreak', 'Nine', 'Orion', 'Vector'] } }
+          ]
+        }
+      }
+    }
   };
 
   const defaultState = () => ({
@@ -53,6 +109,7 @@
     news: [{ id: 'welcome', week: 1, title: 'A new independent studio enters the market', text: 'Your rented office is open and Production Team A is ready for its first project.', category: 'studio' }],
     tutorialStep: 0,
     firstYearComplete: false,
+    titleGenerator: { counter: 0, history: [], draft: null },
     advancing: false,
     nextId: 1
   });
@@ -80,6 +137,7 @@
       ...old,
       version: SAVE_VERSION,
       team: { ...fresh.team, ...(old.team || {}) },
+      titleGenerator: { ...fresh.titleGenerator, ...(old.titleGenerator || {}) },
       productions: Array.isArray(old.productions) ? old.productions : [],
       catalog: Array.isArray(old.catalog) ? old.catalog : [],
       transactions: Array.isArray(old.transactions) ? old.transactions : [],
@@ -115,6 +173,71 @@
     let n = 0;
     for (const ch of `${id}-${salt}`) n = (n * 31 + ch.charCodeAt(0)) % 9973;
     return (n % 17) - 8;
+  }
+
+  function normalizeTitle(title) {
+    return String(title || '').trim().replace(/\s+/g, ' ').toLocaleLowerCase();
+  }
+
+  function titleCandidates(format, genre) {
+    const bank = DATA.titles[genre]?.[format] || DATA.titles.Comedy.Movie;
+    const generated = [];
+    for (const template of bank.templates) {
+      const keys = Object.keys(template.words);
+      const build = (index, values) => {
+        if (index >= keys.length) {
+          generated.push(keys.reduce((title, key, keyIndex) => title.replace(`{${key}}`, values[keyIndex]), template.pattern));
+          return;
+        }
+        for (const word of template.words[keys[index]]) build(index + 1, [...values, word]);
+      };
+      build(0, []);
+    }
+    return [...new Map([...bank.curated, ...generated].map(title => [normalizeTitle(title), title])).values()];
+  }
+
+  function generateTitle(format, genre, excludedTitle = '') {
+    const candidates = titleCandidates(format, genre);
+    const existing = new Set(state.productions.map(prod => normalizeTitle(prod.title)));
+    const recent = new Set((state.titleGenerator.history || []).map(normalizeTitle));
+    const excluded = normalizeTitle(excludedTitle);
+    const start = (state.titleGenerator.counter * 7 + state.week * 3 + state.nextId) % candidates.length;
+    let chosen = '';
+    for (let attempt = 0; attempt < candidates.length; attempt++) {
+      const candidate = candidates[(start + attempt) % candidates.length];
+      const normalized = normalizeTitle(candidate);
+      if (!existing.has(normalized) && !recent.has(normalized) && normalized !== excluded) {
+        chosen = candidate;
+        break;
+      }
+    }
+    if (!chosen) {
+      const base = candidates[start] || `${genre} ${format}`;
+      let suffix = state.titleGenerator.counter + 2;
+      chosen = `${base} ${suffix}`;
+      while (existing.has(normalizeTitle(chosen)) && suffix < state.titleGenerator.counter + 30) chosen = `${base} ${++suffix}`;
+    }
+    state.titleGenerator.counter++;
+    state.titleGenerator.history = [...(state.titleGenerator.history || []), chosen].slice(-24);
+    return chosen;
+  }
+
+  function ensureTitleDraft(format = 'Movie', genre = 'Comedy') {
+    if (!state.titleGenerator.draft) {
+      state.titleGenerator.draft = { title: generateTitle(format, genre), source: 'generated', format, genre };
+      saveState();
+    }
+    return state.titleGenerator.draft;
+  }
+
+  function continuationTitle(parentTitle, kind, number) {
+    const clean = String(parentTitle || '').replace(/\s+[—-]\s+Season\s+\d+$/i, '').replace(/\s+\d+$/i, '').trim();
+    return kind === 'season' ? `${clean} — Season ${number}` : `${clean} ${number}`;
+  }
+
+  function unrelatedTitleDuplicate(title, parentProductionId = null) {
+    const normalized = normalizeTitle(title);
+    return state.productions.some(prod => prod.id !== parentProductionId && normalizeTitle(prod.title) === normalized);
   }
 
   function finishProduction(prod) {
@@ -199,7 +322,7 @@
   function greenlight(form) {
     if (state.team.busyProductionId) return showToast('Production Team A is already booked.');
     const data = new FormData(form);
-    const title = data.get('title').trim();
+    let title = data.get('title').trim();
     const format = data.get('format');
     const genre = data.get('genre');
     const budgetSize = data.get('budget');
@@ -208,8 +331,10 @@
     const director = DATA.talent.directors.find(x => x.id === data.get('director'));
     const lead = DATA.talent.leads.find(x => x.id === data.get('lead'));
     const marketingTier = data.get('marketing');
-    if (!title || !concept || !writer || !director || !lead) return showToast('Please complete every project field.');
+    if (!title) title = generateTitle(format, genre);
+    if (!concept || !writer || !director || !lead) return showToast('Please complete every project field.');
     if (!concept.genres.includes(genre)) return showToast('That story concept does not fit the selected genre.');
+    if (unrelatedTitleDuplicate(title) && !confirm(`Another unrelated project is already named “${title}”. Use this title anyway?`)) return;
     const baseCost = DATA.budgets[format][budgetSize];
     const marketingCost = DATA.marketing[marketingTier];
     const talentCost = writer.cost + director.cost + lead.cost;
@@ -227,6 +352,7 @@
       lifetimeRevenue: 0, boxOfficeGross: 0, digitalGross: 0, startWeek: state.week
     };
     state.productions.push(prod);
+    state.titleGenerator.draft = null;
     state.team.busyProductionId = id;
     recordTransaction(-talentCost, 'Direct project expense', `${title}: creative team contracts`, id);
     recordTransaction(-marketingCost, 'Direct project expense', `${title}: ${marketingTier.toLowerCase()} awareness campaign`, id);
@@ -298,13 +424,14 @@
     const active = state.productions.filter(p => p.status === 'In Production');
     const released = state.productions.filter(p => p.status === 'Released');
     const busy = !!state.team.busyProductionId;
+    const draft = busy ? { title: '', format: 'Movie', genre: 'Comedy' } : ensureTitleDraft();
     return `${pageHeader('Production office', 'Productions', 'Create studio-owned movies and short television seasons. One team can handle one production at this stage.')}
       ${active.length ? `<div class="grid">${active.map(productionCard).join('')}</div>` : ''}
       <div class="section-title"><h2>Greenlight an original</h2><span class="tag">Studio-owned rights</span></div>
       <form id="greenlight-form" class="card form-grid">
-        <div class="field full"><label for="title">Project title</label><input id="title" name="title" maxlength="48" placeholder="e.g. Midnight Detour" required ${busy ? 'disabled' : ''}></div>
-        <div class="field"><label for="format">Format</label><select id="format" name="format" ${busy ? 'disabled' : ''}><option>Movie</option><option>TV Season</option></select></div>
-        <div class="field"><label for="genre">Genre</label><select id="genre" name="genre" ${busy ? 'disabled' : ''}><option>Comedy</option><option>Drama</option><option>Action</option></select></div>
+        <div class="field full"><label for="title">Project title</label><div class="title-row"><input id="title" name="title" maxlength="48" value="${esc(draft.title)}" placeholder="A title will be generated automatically" ${busy ? 'disabled' : ''}><button class="text-button" id="generate-title" type="button" ${busy ? 'disabled' : ''}>Generate Another Title</button></div><span class="field-help">You can keep this suggestion or type your own title.</span></div>
+        <div class="field"><label for="format">Format</label><select id="format" name="format" ${busy ? 'disabled' : ''}><option ${draft.format === 'Movie' ? 'selected' : ''}>Movie</option><option ${draft.format === 'TV Season' ? 'selected' : ''}>TV Season</option></select></div>
+        <div class="field"><label for="genre">Genre</label><select id="genre" name="genre" ${busy ? 'disabled' : ''}><option ${draft.genre === 'Comedy' ? 'selected' : ''}>Comedy</option><option ${draft.genre === 'Drama' ? 'selected' : ''}>Drama</option><option ${draft.genre === 'Action' ? 'selected' : ''}>Action</option></select></div>
         <div class="field full"><label for="concept">Story concept</label><select id="concept" name="concept" ${busy ? 'disabled' : ''}>${DATA.concepts.map(x => `<option value="${x.id}">${x.name} — ${x.note}</option>`).join('')}</select></div>
         <div class="field"><label for="budget">Production budget</label><select id="budget" name="budget" ${busy ? 'disabled' : ''}><option>Small</option><option>Medium</option><option>Large</option></select></div>
         <div class="field"><label for="marketing">Awareness campaign</label><select id="marketing" name="marketing" ${busy ? 'disabled' : ''}><option>Lean</option><option>Standard</option><option>Strong</option></select></div>
@@ -332,6 +459,35 @@
     const due = talent + marketing + base * .2;
     const duration = (format === 'Movie' ? 10 : 12) + ({ Small: 0, Medium: 2, Large: 4 }[budget]);
     box.innerHTML = `<div class="summary-row"><span>Due when approved</span><strong>${money(due)}</strong></div><div class="summary-row"><span>Remaining committed production costs</span><strong>${money(base * .8)}</strong></div><div class="summary-row"><span>Total project cost (shared overhead excluded)</span><strong>${money(base + talent + marketing)}</strong></div><div class="summary-row"><span>Estimated production time</span><strong>${duration} weeks</strong></div><p class="muted">Marketing raises awareness, not finished quality. Strong genre fit can make affordable talent a smart choice.</p>`;
+  }
+
+  function updateDraftForSelection(form) {
+    const titleInput = form.elements.namedItem('title');
+    const format = form.elements.namedItem('format').value;
+    const genre = form.elements.namedItem('genre').value;
+    const draft = ensureTitleDraft(format, genre);
+    if (draft.source === 'generated' && (draft.format !== format || draft.genre !== genre)) {
+      draft.title = generateTitle(format, genre, draft.title);
+      titleInput.value = draft.title;
+    }
+    draft.format = format;
+    draft.genre = genre;
+    saveState();
+  }
+
+  function generateAnotherDraftTitle(form) {
+    const titleInput = form.elements.namedItem('title');
+    const format = form.elements.namedItem('format').value;
+    const genre = form.elements.namedItem('genre').value;
+    const draft = ensureTitleDraft(format, genre);
+    if (draft.source === 'manual' && titleInput.value.trim() && !confirm('Replace your manually entered title with a generated suggestion?')) return;
+    draft.title = generateTitle(format, genre, titleInput.value);
+    draft.source = 'generated';
+    draft.format = format;
+    draft.genre = genre;
+    titleInput.value = draft.title;
+    saveState();
+    showToast(`New ${genre.toLowerCase()} ${format.toLowerCase()} title suggested.`);
   }
 
   function renderCatalog() {
@@ -427,7 +583,17 @@
     document.querySelector('#next-week')?.addEventListener('click', event => { event.currentTarget.disabled = true; advanceWeek(); });
     const form = document.querySelector('#greenlight-form');
     form?.addEventListener('submit', event => { event.preventDefault(); greenlight(event.currentTarget); });
-    form?.addEventListener('change', updateProjectSummary);
+    form?.addEventListener('change', event => {
+      if (event.target.name === 'format' || event.target.name === 'genre') updateDraftForSelection(form);
+      updateProjectSummary();
+    });
+    form?.elements.namedItem('title')?.addEventListener('input', event => {
+      const draft = ensureTitleDraft(form.elements.namedItem('format').value, form.elements.namedItem('genre').value);
+      draft.title = event.target.value;
+      draft.source = 'manual';
+      saveState();
+    });
+    document.querySelector('#generate-title')?.addEventListener('click', () => generateAnotherDraftTitle(form));
     document.querySelector('#export-save')?.addEventListener('click', exportSave);
     document.querySelector('#import-save')?.addEventListener('click', () => document.querySelector('#save-file').click());
     document.querySelector('#reset-game')?.addEventListener('click', () => {
@@ -454,5 +620,5 @@
   });
   render();
 
-  window.ScreenEmpireTest = { defaultState, stageFor, deterministicNoise, migrateState, DATA };
+  window.ScreenEmpireTest = { defaultState, stageFor, deterministicNoise, migrateState, normalizeTitle, titleCandidates, generateTitle, continuationTitle, DATA };
 })();

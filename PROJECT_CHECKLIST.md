@@ -15,6 +15,9 @@
 - Browser autosave, versioned import/export, pre-import backup, and confirmed reset.
 - Responsive desktop/mobile interface and a short beginner tutorial.
 - First-year survival milestone followed by continued sandbox play.
+- Automatic local movie/TV title generator with distinct comedy, drama, and action styles.
+- Saved draft suggestions, **Generate Another Title**, and protection for manually typed titles.
+- Duplicate avoidance plus future-ready season/sequel title continuity helpers.
 
 ## Tested
 
@@ -23,6 +26,7 @@
 - Finance checks: overhead once per week, staged production costs once, and revenue shares once.
 - Import validation and protection against double-clicking the shared clock.
 - First-year milestone logic is implemented; its full 52-week UI path still needs manual verification.
+- Title-generator checks: all six genre/format banks, automatic and empty-field naming, manual-title confirmation, unchanged project settings, saved drafts, older saves, and title consistency in news/finances.
 
 ## Known limitations
 

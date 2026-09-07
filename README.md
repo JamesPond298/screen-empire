@@ -18,7 +18,7 @@ The successful result is a dark-blue studio dashboard showing your cash, Week 1,
 ## Test your first production
 
 1. Click **Productions** in the left menu.
-2. Enter a title and leave the beginner-friendly small/default choices selected.
+2. Keep the automatically suggested title, click **Generate Another Title**, or type your own.
 3. Review “Due when approved,” remaining commitments, total cost, and timing.
 4. Click **Greenlight production**. Greenlight means “approve production.”
 5. Click the one shared **Next Week** button until the project is released.
@@ -26,6 +26,8 @@ The successful result is a dark-blue studio dashboard showing your cash, Week 1,
 7. Refresh the browser page. Your studio and project should still be there.
 
 Browser autosaves stay on this browser and device; they are not a cloud account. Use **Save & Settings → Export Save** to download a portable backup.
+
+Changing the format or genre refreshes an automatic suggestion, but never overwrites a title you typed yourself. Existing studios and approved production titles are preserved when the game updates.
 
 ## Optional developer test
 

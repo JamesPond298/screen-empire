@@ -107,6 +107,11 @@ button:disabled { cursor: not-allowed; opacity: .45; }
 .field { display: grid; gap: 7px; }
 .field.full { grid-column: 1 / -1; }
 .field label { color: #c7d4e3; font-size: .82rem; font-weight: 750; }
+.title-row { display: flex; align-items: center; gap: 10px; }
+.title-row input { flex: 1 1 auto; }
+.text-button { flex: 0 0 auto; padding: 7px 2px; border: 0; color: var(--cyan); background: transparent; font-size: .82rem; font-weight: 800; }
+.text-button:hover:not(:disabled) { color: #86eee6; text-decoration: underline; }
+.field-help { color: var(--muted); font-size: .76rem; }
 input, select { width: 100%; min-height: 44px; padding: 9px 12px; border: 1px solid #344963; border-radius: 9px; outline: none; color: var(--ink); background: #0b1524; }
 input:focus, select:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(66,211,200,.12); }
 .summary-box { grid-column: 1 / -1; padding: 16px; border-radius: 12px; background: #0b1524; }
@@ -151,4 +156,6 @@ input:focus, select:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgb
   .production-card { grid-template-columns: 1fr; }
   .money-stack { text-align: left; }
   .setup-form { flex-direction: column; }
+  .title-row { align-items: stretch; flex-direction: column; }
+  .text-button { align-self: flex-start; }
 }
