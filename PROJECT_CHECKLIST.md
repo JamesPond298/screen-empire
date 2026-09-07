@@ -18,6 +18,9 @@
 - Automatic local movie/TV title generator with distinct comedy, drama, and action styles.
 - Saved draft suggestions, **Generate Another Title**, and protection for manually typed titles.
 - Duplicate avoidance plus future-ready season/sequel title continuity helpers.
+- Central economy configuration, $6,000 future weekly overhead, and shorter production schedules.
+- Rebalanced theatrical/digital income with 12-week movie and 14-week TV earning windows.
+- Project planning now shows overhead allocation, uncertain revenue, and estimated surplus/loss.
 
 ## Tested
 
@@ -27,6 +30,7 @@
 - Import validation and protection against double-clicking the shared clock.
 - First-year milestone logic is implemented; its full 52-week UI path still needs manual verification.
 - Title-generator checks: all six genre/format banks, automatic and empty-field naming, manual-title confirmation, unchanged project settings, saved drafts, older saves, and title consistency in news/finances.
+- Economy simulation: 100 seeds each for movie, television, and mixed strategies, before and after; all 300 revised runs survived and produced positive median operating results.
 
 ## Known limitations
 
@@ -35,7 +39,8 @@
 - Streaming licensing, negotiations, buyer market, and expanded News filters are reserved for Stage 3 onward.
 - Browser saves remain on one browser/device unless exported.
 - Final visual review in Edge or Chrome remains a manual check because the protected preview could not open a local-file URL.
+- Contract, event, and loan strategies cannot be simulated until their later update stages exist.
 
 ## Next stage
 
-Stage 2: paid commercials, music videos, promotional/corporate work, contract milestones, deadlines, commissioned television, client relationships, and renewal offers.
+Economy overhaul Stage 2: positive business opportunities with eligibility, expiration, saved IDs, News links, and one-time payment tracking. Paid client contracts will be introduced through that work.

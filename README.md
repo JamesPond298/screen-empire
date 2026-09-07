@@ -29,6 +29,12 @@ Browser autosaves stay on this browser and device; they are not a cloud account.
 
 Changing the format or genre refreshes an automatic suggestion, but never overwrites a title you typed yourself. Existing studios and approved production titles are preserved when the game updates.
 
+## Economy balance update
+
+The ordinary production loop was rebalanced after a 52-week audit. Future weekly overhead is now **$6,000**, small productions finish sooner, movie revenue lasts 12 weeks, and television revenue lasts 14 weeks. The production-planning card now shows allocated overhead, an uncertain revenue range, and a projected result; allocated overhead is a forecast only and is not charged a second time.
+
+Existing studios keep their cash, productions, titles, catalog, and transaction history. The lower overhead applies to future weeks automatically.
+
 ## Optional developer test
 
 If Node.js is installed, open PowerShell in this folder and run `npm test`. A successful result ends with “Stage 1 playthrough passed.” You do not need this command just to play.

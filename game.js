@@ -3,10 +3,26 @@
 
   const SAVE_KEY = 'screenEmpireSave';
   const BACKUP_KEY = 'screenEmpireSaveBackup';
-  const SAVE_VERSION = 2;
+  const SAVE_VERSION = 3;
   const money = value => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(value);
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
   const esc = value => String(value ?? '').replace(/[&<>'"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
+
+  // Centralized tuning values. Planning overhead is shown in forecasts but is
+  // charged only once through the shared weekly clock.
+  const ECONOMY = {
+    startingCash: 550000,
+    weeklyOverhead: 6000,
+    reserveWeeks: 4,
+    duration: {
+      Movie: { Small: 8, Medium: 10, Large: 12 },
+      'TV Season': { Small: 9, Medium: 11, Large: 13 }
+    },
+    release: {
+      Movie: { earningWeeks: 12, theatricalWeeks: 6, theatricalDecay: .72, studioShare: .50, grossBase: .44, grossAppeal: 1.55, digitalDecay: .72, digitalBase: .08, digitalAppeal: .15 },
+      'TV Season': { earningWeeks: 14, digitalDecay: .78, digitalBase: .23, digitalAppeal: .62 }
+    }
+  };
 
   const DATA = {
     concepts: [
@@ -99,8 +115,8 @@
     version: SAVE_VERSION,
     studioName: '',
     week: 1,
-    cash: 550000,
-    weeklyOverhead: 7500,
+    cash: ECONOMY.startingCash,
+    weeklyOverhead: ECONOMY.weeklyOverhead,
     activePage: 'dashboard',
     team: { name: 'Production Team A', busyProductionId: null },
     productions: [],
@@ -132,7 +148,7 @@
 
   function migrateState(old) {
     const fresh = defaultState();
-    return {
+    const migrated = {
       ...fresh,
       ...old,
       version: SAVE_VERSION,
@@ -144,6 +160,10 @@
       news: Array.isArray(old.news) ? old.news : fresh.news,
       advancing: false
     };
+    // Apply the lower future overhead to existing studios without rewriting
+    // their past cash or transaction history.
+    if ((old.version || 0) < 3 && migrated.weeklyOverhead === 7500) migrated.weeklyOverhead = ECONOMY.weeklyOverhead;
+    return migrated;
   }
 
   function saveState() {
@@ -252,26 +272,34 @@
     prod.status = 'Released';
     prod.stage = 'Released';
     prod.releaseWeek = state.week;
-    prod.revenueWeeksRemaining = prod.format === 'Movie' ? 8 : 10;
+    prod.revenueWeeksRemaining = ECONOMY.release[prod.format].earningWeeks;
     state.team.busyProductionId = null;
     state.catalog.push(prod.id);
     addNews(`${prod.title} is now available`, `Critics scored it ${prod.criticScore}, while audiences scored it ${prod.audienceScore}. Revenue will arrive over several weeks.`, 'studio');
   }
 
+  function releaseRevenueForWeek(prod, elapsed) {
+    const appeal = clamp((prod.audienceScore * .58 + prod.awareness * .42) / 100, .2, .95);
+    const rules = ECONOMY.release[prod.format];
+    if (prod.format === 'Movie' && elapsed < rules.theatricalWeeks) {
+      const grossSales = Math.round(prod.baseCost * (rules.grossBase + appeal * rules.grossAppeal) * Math.pow(rules.theatricalDecay, elapsed));
+      return { channel: 'theatrical', grossSales, studioRevenue: Math.round(grossSales * rules.studioShare) };
+    }
+    const digitalElapsed = prod.format === 'Movie' ? elapsed - rules.theatricalWeeks : elapsed;
+    const studioRevenue = Math.round(prod.baseCost * (rules.digitalBase + appeal * rules.digitalAppeal) * Math.pow(rules.digitalDecay, digitalElapsed));
+    return { channel: 'digital', grossSales: studioRevenue, studioRevenue };
+  }
+
   function processReleaseRevenue(prod) {
     if (prod.revenueWeeksRemaining <= 0) return;
-    const elapsed = (prod.format === 'Movie' ? 8 : 10) - prod.revenueWeeksRemaining;
-    const decay = Math.pow(.68, elapsed);
-    const appeal = (prod.audienceScore * .58 + prod.awareness * .42) / 100;
-    let studioRevenue;
+    const elapsed = ECONOMY.release[prod.format].earningWeeks - prod.revenueWeeksRemaining;
+    const result = releaseRevenueForWeek(prod, elapsed);
+    const studioRevenue = result.studioRevenue;
     let detail;
-    if (prod.format === 'Movie' && elapsed < 5) {
-      const grossSales = Math.round((prod.baseCost * (1.0 + appeal * 2.5)) * decay * .52);
-      studioRevenue = Math.round(grossSales * .45);
-      prod.boxOfficeGross = (prod.boxOfficeGross || 0) + grossSales;
-      detail = `${prod.title}: 45% studio share of ${money(grossSales)} weekly box office`;
+    if (result.channel === 'theatrical') {
+      prod.boxOfficeGross = (prod.boxOfficeGross || 0) + result.grossSales;
+      detail = `${prod.title}: ${Math.round(ECONOMY.release.Movie.studioShare * 100)}% studio share of ${money(result.grossSales)} weekly box office`;
     } else {
-      studioRevenue = Math.round((prod.baseCost * (.12 + appeal * .3)) * decay);
       prod.digitalGross = (prod.digitalGross || 0) + studioRevenue;
       detail = `${prod.title}: digital purchases and rentals`;
     }
@@ -342,7 +370,7 @@
     const dueNow = talentCost + marketingCost + initialProduction;
     if (state.cash - dueNow < state.weeklyOverhead * 4) return showToast(`You need ${money(dueNow + state.weeklyOverhead * 4)} to fund this safely.`);
     const id = `prod-${state.nextId++}`;
-    const duration = (format === 'Movie' ? 10 : 12) + ({ Small: 0, Medium: 2, Large: 4 }[budgetSize]);
+    const duration = ECONOMY.duration[format][budgetSize];
     const awareness = clamp(18 + marketingCost / 1600 + lead.popularity * .35, 20, 88);
     const prod = {
       id, title, format, genre, budgetSize, concept, marketingTier, marketingCost, baseCost,
@@ -367,7 +395,7 @@
 
   function availableCash() {
     const committed = state.productions.filter(p => p.status === 'In Production').reduce((sum, p) => sum + p.remainingCost, 0);
-    return Math.max(0, state.cash - committed - state.weeklyOverhead * 4);
+    return Math.max(0, state.cash - committed - state.weeklyOverhead * ECONOMY.reserveWeeks);
   }
 
   function pageHeader(kicker, title, body, action = '') {
@@ -457,8 +485,22 @@
     const people = ['writer', 'director', 'lead'].map(role => DATA.talent[role === 'lead' ? 'leads' : `${role}s`].find(x => x.id === field(role).value));
     const talent = people.reduce((s, x) => s + (x?.cost || 0), 0);
     const due = talent + marketing + base * .2;
-    const duration = (format === 'Movie' ? 10 : 12) + ({ Small: 0, Medium: 2, Large: 4 }[budget]);
-    box.innerHTML = `<div class="summary-row"><span>Due when approved</span><strong>${money(due)}</strong></div><div class="summary-row"><span>Remaining committed production costs</span><strong>${money(base * .8)}</strong></div><div class="summary-row"><span>Total project cost (shared overhead excluded)</span><strong>${money(base + talent + marketing)}</strong></div><div class="summary-row"><span>Estimated production time</span><strong>${duration} weeks</strong></div><p class="muted">Marketing raises awareness, not finished quality. Strong genre fit can make affordable talent a smart choice.</p>`;
+    const duration = ECONOMY.duration[format][budget];
+    const concept = DATA.concepts.find(item => item.id === field('concept').value);
+    const ability = people.reduce((sum, person) => sum + person.ability, 0) / people.length;
+    const fit = people.reduce((sum, person) => sum + (person.fit === field('genre').value ? 100 : 58), 0) / people.length;
+    const reliability = people.reduce((sum, person) => sum + person.reliability, 0) / people.length;
+    const expectedQuality = clamp(concept.strength * .31 + ability * .34 + fit * .2 + reliability * .15 + ({ Small: 0, Medium: 5, Large: 9 }[budget]), 35, 96);
+    const awareness = clamp(18 + marketing / 1600 + people[2].popularity * .35, 20, 88);
+    const expectedAudience = clamp(expectedQuality * .82 + awareness * .13, 30, 97);
+    const preview = { format, baseCost: base, audienceScore: expectedAudience, awareness };
+    let expectedRevenue = 0;
+    for (let week = 0; week < ECONOMY.release[format].earningWeeks; week++) expectedRevenue += releaseRevenueForWeek(preview, week).studioRevenue;
+    const directCost = base + talent + marketing;
+    const overheadAllocation = duration * state.weeklyOverhead;
+    const lowRevenue = Math.round(expectedRevenue * .78);
+    const highRevenue = Math.round(expectedRevenue * 1.22);
+    box.innerHTML = `<div class="summary-row"><span>Due when approved</span><strong>${money(due)}</strong></div><div class="summary-row"><span>Remaining committed production costs</span><strong>${money(base * .8)}</strong></div><div class="summary-row"><span>Total direct project cost</span><strong>${money(directCost)}</strong></div><div class="summary-row"><span>Estimated production time</span><strong>${duration} weeks</strong></div><div class="summary-row"><span>Planning overhead allocation (not charged twice)</span><strong>${money(overheadAllocation)}</strong></div><div class="summary-row"><span>Estimated studio revenue (uncertain)</span><strong>${money(lowRevenue)}–${money(highRevenue)}</strong></div><div class="summary-row"><span>Estimated result after allocated overhead</span><strong>${money(lowRevenue - directCost - overheadAllocation)} to ${money(highRevenue - directCost - overheadAllocation)}</strong></div><p class="muted">This is a forecast, not guaranteed income. Marketing raises awareness, not finished quality. Strong genre fit can make affordable talent a smart choice.</p>`;
   }
 
   function updateDraftForSelection(form) {
@@ -494,7 +536,7 @@
     const catalog = state.catalog.map(id => state.productions.find(p => p.id === id)).filter(Boolean);
     return `${pageHeader('Library & rights', 'Catalog', 'Your catalog is the collection of finished productions and rights your studio controls.')}
       ${catalog.length ? `<div class="grid two">${catalog.map(prod => `<article class="card"><div class="catalog-title"><div><h2>${esc(prod.title)}</h2><div class="production-meta"><span class="tag">100% studio owned</span><span class="tag">${prod.format}</span><span class="tag">${prod.genre}</span></div></div><div><span class="score">${prod.audienceScore}</span></div></div>
-      <div class="summary-row"><span>Lifetime studio revenue</span><strong>${money(prod.lifetimeRevenue)}</strong></div><div class="summary-row"><span>Total direct cost</span><strong>${money(prod.totalCost)}</strong></div><div class="summary-row"><span>Direct project profit/loss</span><strong class="${prod.lifetimeRevenue - prod.totalCost >= 0 ? 'good' : 'bad'}">${money(prod.lifetimeRevenue - prod.totalCost)}</strong></div>${prod.format === 'Movie' ? `<div class="summary-row"><span>Total box-office sales</span><strong>${money(prod.boxOfficeGross)}</strong></div><p class="muted">The studio receives 45% of fictional ticket sales; the full box office is shown separately.</p>` : ''}<p class="muted">Streaming licenses and broader rights management arrive in Stage 3.</p></article>`).join('')}</div>` : `<div class="empty">Finished studio-owned productions will appear here permanently.</div>`}`;
+      <div class="summary-row"><span>Lifetime studio revenue</span><strong>${money(prod.lifetimeRevenue)}</strong></div><div class="summary-row"><span>Total direct cost</span><strong>${money(prod.totalCost)}</strong></div><div class="summary-row"><span>Direct project profit/loss</span><strong class="${prod.lifetimeRevenue - prod.totalCost >= 0 ? 'good' : 'bad'}">${money(prod.lifetimeRevenue - prod.totalCost)}</strong></div>${prod.format === 'Movie' ? `<div class="summary-row"><span>Total box-office sales</span><strong>${money(prod.boxOfficeGross)}</strong></div><p class="muted">The studio receives ${Math.round(ECONOMY.release.Movie.studioShare * 100)}% of fictional ticket sales; the full box office is shown separately.</p>` : ''}<p class="muted">Release earnings now continue for ${ECONOMY.release[prod.format].earningWeeks} weeks. Streaming licenses and broader rights management arrive in a later stage.</p></article>`).join('')}</div>` : `<div class="empty">Finished studio-owned productions will appear here permanently.</div>`}`;
   }
 
   function renderFinances() {
@@ -574,8 +616,8 @@
       event.preventDefault();
       state.studioName = new FormData(event.currentTarget).get('studioName').trim();
       if (!state.studioName) return;
-      recordTransaction(550000, 'Starting capital', 'Founder funding deposited');
-      state.cash = 550000;
+      recordTransaction(ECONOMY.startingCash, 'Starting capital', 'Founder funding deposited');
+      state.cash = ECONOMY.startingCash;
       saveState();
       render();
     });
@@ -620,5 +662,5 @@
   });
   render();
 
-  window.ScreenEmpireTest = { defaultState, stageFor, deterministicNoise, migrateState, normalizeTitle, titleCandidates, generateTitle, continuationTitle, DATA };
+  window.ScreenEmpireTest = { defaultState, stageFor, deterministicNoise, migrateState, normalizeTitle, titleCandidates, generateTitle, continuationTitle, releaseRevenueForWeek, ECONOMY, DATA };
 })();
