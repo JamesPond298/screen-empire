@@ -86,9 +86,10 @@ assert.equal(reloadSave.productions[0].criticScore, criticScore, 'reload does no
 assert.match(reloaded.window.document.body.textContent, /Midnight Detour/, 'saved production renders after reload');
 
 const migrated = reloaded.window.ScreenEmpireTest.migrateState({ studioName: 'Old Save', week: 4, cash: 100000, productions: [], version: 0 });
-assert.equal(migrated.version, 1);
+assert.equal(migrated.version, 2);
 assert.ok(Array.isArray(migrated.news));
 assert.equal(migrated.weeklyOverhead, 7500, 'older saves receive safe defaults');
+assert.equal(migrated.titleGenerator.draft, null, 'older saves receive generator defaults without changing productions');
 
 const beforeInvalidImport = reloaded.window.localStorage.getItem('screenEmpireSave');
 const invalidFile = new reloaded.window.File(['not valid json'], 'broken.json', { type: 'application/json' });
