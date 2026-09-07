@@ -53,10 +53,10 @@ document.querySelector('#greenlight-form').dispatchEvent(new dom.window.Event('s
 save = savedState(dom);
 assert.equal(save.productions.length, 1);
 assert.equal(save.productions[0].totalCost, 299000);
-assert.equal(save.cash, 387500, 'first project remains affordable after one week of overhead');
+assert.equal(save.cash, 389000, 'first project remains affordable after one week of overhead');
 assert.equal(save.team.busyProductionId, save.productions[0].id);
 
-for (let i = 0; i < 10; i++) click(dom, '#next-week');
+for (let i = 0; i < 8; i++) click(dom, '#next-week');
 save = savedState(dom);
 let production = save.productions[0];
 assert.equal(production.status, 'Released');
@@ -65,7 +65,8 @@ assert.equal(save.catalog.length, 1);
 assert.equal(save.team.busyProductionId, null);
 assert.ok(Number.isInteger(production.criticScore) && Number.isInteger(production.audienceScore));
 
-for (let i = 0; i < 8; i++) click(dom, '#next-week');
+const earningWeeks = dom.window.ScreenEmpireTest.ECONOMY.release.Movie.earningWeeks;
+for (let i = 0; i < earningWeeks; i++) click(dom, '#next-week');
 save = savedState(dom);
 production = save.productions[0];
 assert.ok(production.lifetimeRevenue > 0, 'released production earns revenue over time');
@@ -75,7 +76,7 @@ click(dom, '#next-week');
 save = savedState(dom);
 assert.equal(save.productions[0].lifetimeRevenue, finishedRevenue, 'revenue does not repeat after the release window');
 assert.equal(save.transactions.filter(tx => tx.category === 'Shared overhead').length, save.week - 1, 'overhead is charged once per advanced week');
-assert.equal(save.transactions.filter(tx => tx.category === 'Operating revenue').length, 8, 'each weekly receipt occurs once');
+assert.equal(save.transactions.filter(tx => tx.category === 'Operating revenue').length, earningWeeks, 'each weekly receipt occurs once');
 
 const portableSave = dom.window.localStorage.getItem('screenEmpireSave');
 const criticScore = save.productions[0].criticScore;
@@ -86,9 +87,9 @@ assert.equal(reloadSave.productions[0].criticScore, criticScore, 'reload does no
 assert.match(reloaded.window.document.body.textContent, /Midnight Detour/, 'saved production renders after reload');
 
 const migrated = reloaded.window.ScreenEmpireTest.migrateState({ studioName: 'Old Save', week: 4, cash: 100000, productions: [], version: 0 });
-assert.equal(migrated.version, 2);
+assert.equal(migrated.version, 3);
 assert.ok(Array.isArray(migrated.news));
-assert.equal(migrated.weeklyOverhead, 7500, 'older saves receive safe defaults');
+assert.equal(migrated.weeklyOverhead, 6000, 'older saves receive the improved future overhead without changing history');
 assert.equal(migrated.titleGenerator.draft, null, 'older saves receive generator defaults without changing productions');
 
 const beforeInvalidImport = reloaded.window.localStorage.getItem('screenEmpireSave');

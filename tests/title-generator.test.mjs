@@ -97,7 +97,7 @@ delete existingSave.titleGenerator;
 const legacyDom = openGame(JSON.stringify(existingSave));
 const migrated = JSON.parse(legacyDom.window.localStorage.getItem('screenEmpireSave'));
 assert.equal(migrated.productions[0].title, 'A Preserved Classic', 'existing save titles remain unchanged');
-assert.equal(migrated.version, 2);
+assert.equal(migrated.version, 3);
 
 console.log('Reviewed title samples:', JSON.stringify(samples));
 console.log('Title generator passed: automatic naming, manual protection, format/genre response, continuity helpers, and save compatibility.');
