@@ -2,6 +2,10 @@
 
 This is the first playable foundation of **Screen Empire**, a fictional television and movie studio simulator. It runs entirely in your browser and does not need an account, paid service, or internet connection.
 
+## Play online
+
+[Open Screen Empire](https://jamespond298.github.io/screen-empire/) on a computer or phone. Progress is saved separately in each browser, so use **Export Save** and **Import Save** when moving a studio between devices.
+
 ## Open the game on Windows
 
 1. Open the **Screen Simulator** folder in File Explorer.
