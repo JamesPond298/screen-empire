@@ -1,0 +1,12 @@
+{
+  "name": "screen-empire",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A browser-based television and movie studio simulator.",
+  "scripts": {
+    "test": "node tests/stage1.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.1"
+  }
+}
