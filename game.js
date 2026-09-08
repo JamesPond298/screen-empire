@@ -145,4 +145,413 @@
       migrated.progression.unlockedGenres = [...new Set([...BASE_GENRES, ...(migrated.progression.unlockedGenres || [])])];
       migrated.progression.migrationRecap = `Your existing save earned ${retroExperience} Studio Experience from ${completedOriginals} completed original${completedOriginals === 1 ? '' : 's'}. ${Math.max(0, earned.length - choicesUsed)} genre choice${earned.length - choicesUsed === 1 ? '' : 's'} are ready.`;
       migrated.opportunityClock.nextCheckWeek = migrated.week;
-      migrated.opportunityClock×­´îÚ$z{-®éÜj×F‚òÆF—b6Æ73Ò&6ÆÆ÷WB#ãÆƒ3åv÷&²–â&öw&W73Âöƒ3âG¶7F—fT6öçG&7G2æÖ†2ÓâÇâG¶W62†2çF—FÆR—Òf÷"G¶W62†2æ6Æ–VçB—Ó¢G¶2çvVV·5&VÖ–æ–æwÒvVV²G¶2çvVV·5&VÖ–æ–ærÓÓÒòrr¢w2wÒ&VÖ–æ–ærÂG¶ÖöæW’†2æFVÆ—fW'•–ÖVçB—ÒGVRöâFVÆ—fW'’ãÂ÷æ’æ¦ö–â‚rr—ÓÂöF—cæ¢rwÓÆF—b6Æ73Ò&w&–BGvò"7G–ÆSÒ&Ö&v–â×F÷£‡‚#âG¶—FV×2æÆVæwF‚ò—FV×2æÖ†÷÷'GVæ—G”6&B’æ¦ö–â‚rr’¢sÆF—b6Æ73Ò&V×G’#å–÷W"f—'7B&7F–6ÂöffW"'&—fW2'’vVV²"ãÂöF—câwÓÂöF—cæ²Ğ ¢gVæ7F–öâ&VÆV6U&W÷'B‡’²6öç7B"Òç&VÆV6U&W÷'C²–b‚"’&WGW&ârs²6öç7Bf÷&V67BÒæÆ–fWF–ÖU&WfVçVRÂ"æf÷&V67DÆ÷ròv&VÆ÷rF†RÆææ–ær&ævR6òf"r¢æÆ–fWF–ÖU&WfVçVRâ"æf÷&V67D†–v‚òv&÷fRF†RÆææ–ær&ævRr¢wv—F†–âF†RÆææ–ær&ævRs²&WGW&âÇ6V7F–öâ6Æ73Ò'&VÆV6R×&W÷'B#ãÆƒ3âG·"ç&VÆ–Ö–æ'’òu&VÆ–Ö–æ'’&VÆV6R&W÷'Br¢tÆ–fWF–ÖR&VÆV6R&W÷'BwÓÂöƒ3ãÇãÇ7G&öæsåv†Bv÷&¶VC£Â÷7G&öæsâG¶W62‡"çv÷&¶VB—ÓÂ÷ãÇãÇ7G&öæsåv†B†VÆB—B&6³£Â÷7G&öæsâG¶W62‡"æ†VÆD&6²—ÓÂ÷ãÇãÇ7G&öæsäf÷&V67B6ö×&—6öã£Â÷7G&öæsâG¶ÖöæW’‡æÆ–fWF–ÖU&WfVçVR—Ò&V6V—fVC²G¶f÷&V67GÒâG·"ç&VÆ–Ö–æ'’òu&WfVçVR—27F–ÆÂ'&—f–ærÂ6òF†—2—2æ÷BÆ–fWF–ÖR&öf—Bâr¢uF†R÷&–v–æÂ&VÆV6Rv–æF÷r—26ö×ÆWFRâwÓÂ÷ãÇãÇ7G&öæså7GVF–òW‡W&–Væ6S£Â÷7G&öæsâ²G·"æW‡W&–Væ6RÇÂÒB6ö×ÆWF–öââ7W'&VçBF÷FÂG·7FFRç&öw&W76–öâæW‡W&–Væ6WÒG¶æW‡DW‡W&–Væ6TÖ–ÆW7FöæR‚’ò²æW‡B6†ö–6RBG¶æW‡DW‡W&–Væ6TÖ–ÆW7FöæR‚—Ö¢rwÒãÂ÷ãÂ÷6V7F–öãæ²Ğ¢gVæ7F–öâ&VæFW$6FÆör‚’²6öç7B6FÆörÒ7FFRæ6FÆöræÖ†–BÓâ7FFRç&öGV7F–öç2æf–æB‡Óâæ–BÓÓÒ–B’’æf–ÇFW"„&ööÆVâ“²&WGW&âG·vT†VFW"‚tÆ–'&'’b&–v‡G2rÂt6FÆörb&–v‡G2rÂtf–æ—6†VBF—FÆW2Â&VÆV6R&W÷'G2Â7F—fRÆ–6Vç6W2ÂæB&WF–æVB&–v‡G2âr—ÒG¶6FÆöræÆVæwF‚òÆF—b6Æ73Ò&w&–BGvò#âG¶6FÆöræÖ‡Óâ²6öç7BÆ–6Vç6W2Ò7FFRæÆ–6Vç6W2æf–ÇFW"†ÂÓâÂç&öGV7F–öä–BÓÓÒæ–B“²&WGW&âÆ'F–6ÆR6Æ73Ò&6&B#ãÆF—b6Æ73Ò&6FÆör×F—FÆR#ãÆF—cãÆƒ#âG¶W62‡çF—FÆR—ÓÂöƒ#ãÆF—b6Æ73Ò'&öGV7F–öâÖÖWF#ãÇ7â6Æ73Ò'Fr#å7GVF–ò÷væVCÂ÷7ããÇ7â6Æ73Ò'Fr#âG·æf÷&ÖGÓÂ÷7ããÇ7â6Æ73Ò'Fr#âG·ævVç&WÓÂ÷7ããÂöF—cãÂöF—cãÇ7â6Æ73Ò'66÷&R#âG·æVF–Væ6U66÷&WÓÂ÷7ããÂöF—cãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãåVÆ—G’òv&VæW73Â÷7ããÇ7G&öæsâG·çVÆ—G—ÒòG·æv&VæW77ÓÂ÷7G&öæsãÂöF—cãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãäÆ–fWF–ÖR7GVF–ò&WfVçVSÂ÷7ããÇ7G&öæsâG¶ÖöæW’‡æÆ–fWF–ÖU&WfVçVR—ÓÂ÷7G&öæsãÂöF—cãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãåF÷FÂF—&V7B6÷7CÂ÷7ããÇ7G&öæsâG¶ÖöæW’‡çF÷FÄ6÷7B—ÓÂ÷7G&öæsãÂöF—cãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãäF—&V7B&ö¦V7B&W7VÇCÂ÷7ããÇ7G&öær6Æ73Ò"G·æÆ–fWF–ÖU&WfVçVRÒçF÷FÄ6÷7BãÒòvvööBr¢v&BwÒ#âG¶ÖöæW’‡æÆ–fWF–ÖU&WfVçVRÒçF÷FÄ6÷7B—ÓÂ÷7G&öæsãÂöF—câG·&VÆV6U&W÷'B‡—ÒG¶Æ–6Vç6W2æÖ†ÂÓâÆF—b6Æ73Ò&Æ–6Vç6R#ãÇ7G&öæsâG¶W62†Âæ'W–W"—ÓÂ÷7G&öæsãÆ'#âG¶W62†Âç&–v‡G2—Ò+rG¶ÂæW†6ÇW6—fRòtW†6ÇW6—fRr¢tæöæW†6ÇW6—fRwÒ+rvVV²G¶Âç7F'EvVV·Ş(	2G¶ÂæVæEvVV·Ò+rG¶Âç7FGW7ÓÆ'#ãÇ7â6Æ73Ò&×WFVB#å&WF–æVC¢G¶W62†Âç&WF–æVB—ÓÂ÷7ããÂöF—cæ’æ¦ö–â‚rr—ÓÂö'F–6ÆSæ²Ò’æ¦ö–â‚rr—ÓÂöF—cæ¢sÆF—b6Æ73Ò&V×G’#äf–æ—6†VB7GVF–òÖ÷væVB&öGV7F–öç2v–ÆÂV"†W&RW&ÖæVçFÇ’ãÂöF—câwÖ²Ğ¢gVæ7F–öâ&VæFW$6&VW"‚’²6öç7BæW‡BÒæW‡DW‡W&–Væ6TÖ–ÆW7FöæR‚“²6öç7B&VÖ–æ–ærÒÆÄvVç&TæÖW2æf–ÇFW"†rÓâ7FFRç&öw&W76–öâçVæÆö6¶VDvVç&W2æ–æ6ÇVFW2†r’“²&WGW&âG·vT†VFW"‚u7GVF–òw&÷wF‚rÂt6&VW"&öw&W72rÂtW‡W&–Væ6R6öÖW2g&öÒ6ö×ÆWFVBv÷&²âvVç&R6†ö–6W2&RæWfW"W&6†6VBv—F‚66‚âr—ÒG·&öw&W746&B‚—ÓÆF—b6Æ73Ò'6V7F–öâ×F—FÆR#ãÆƒ#ävVç&R6&–Æ—G“Âöƒ#ãÇ7â6Æ73Ò'Fr#âG·7FFRç&öw&W76–öâçVæÆö6¶VDvVç&W2æÆVæwF‡ÒöbG¶ÆÄvVç&TæÖW2æÆVæwF‡Òf–Æ&ÆSÂ÷7ããÂöF—câG·7FFRç&öw&W76–öâçVæF–ætvVç&T6†ö–6W2òÆF—b6Æ73Ò&6ÆÆ÷WB#ãÆƒ3ä6†ö÷6Rç’æWrvVç&SÂöƒ3ãÇâG·7FFRç&öw&W76–öâçVæF–ætvVç&T6†ö–6W7Ò6†ö–6RG·7FFRç&öw&W76–öâçVæF–ætvVç&T6†ö–6W2ÓÓÒòrr¢w2wÒ&VG’â–÷W"6VÆV7F–öâv÷&·2–ÖÖVF–FVÇ’ãÂ÷ãÆF—b6Æ73Ò&'WGFöâ×&÷r#âG·&VÖ–æ–æræÖ†rÓâÆ'WGFöâ6Æ73Ò&'WGFöâ6ÖÆÂ"FF×VæÆö6²ÖvVç&SÒ"G¶wÒ#âG¶wÓÂö'WGFöãæ’æ¦ö–â‚rr—ÓÂöF—cãÂöF—cæ¢ÆF—b6Æ73Ò&6ÆÆ÷WB#ãÆƒ3äæW‡BvVç&R6†ö–6SÂöƒ3ãÇâG¶æW‡BòG·7FFRç&öw&W76–öâæW‡W&–Væ6WÒòG¶æW‡GÒW‡W&–Væ6Râ6ö×ÆWFRv÷&²FòV&âG¶æW‡BÒ7FFRç&öw&W76–öâæW‡W&–Væ6WÒÖ÷&Ræ¢tÆÂvVç&RÖ–ÆW7FöæW2&V6†VBâwÓÂ÷ãÂöF—cæÓÆF—b6Æ73Ò&w&–BF‡&VR"7G–ÆSÒ&Ö&v–â×F÷£‡‚#âG¶ÆÄvVç&TæÖW2æÖ†rÓâÆ'F–6ÆR6Æ73Ò&6&B#ãÆF—b6Æ73Ò&6FÆör×F—FÆR#ãÆƒ3âG¶wÓÂöƒ3ãÇ7â6Æ73Ò'Fr#âG·7FFRç&öw&W76–öâçVæÆö6¶VDvVç&W2æ–æ6ÇVFW2†r’òtf–Æ&ÆRr¢tÆö6¶VBwÓÂ÷7ããÂöF—cãÇâG¶W62„tTå$U5¶uÒç7G&VæwF‚—ÓÂ÷ãÇ6Æ73Ò&×WFVB#åG&FRÖöfc¢G¶W62„tTå$U5¶uÒçG&FVöfb—ÓÂ÷ãÇ6Æ73Ò&×WFVB#âG´DDæ6öæ6WG2æf–ÇFW"†2Óâ2ævVç&W2æ–æ6ÇVFW2†r’’æÆVæwF‡Ò7F'F–ær6öæ6WG2+rG·F—FÆT6æF–FFW2‚tÖ÷f–RrÂr’æÆVæwF‡ÒÖ÷f–RF—FÆW2+rG·F—FÆT6æF–FFW2‚uEb6V6öârÂr’æÆVæwF‡ÒEbF—FÆW3Â÷ãÂö'F–6ÆSæ’æ¦ö–â‚rr—ÓÂöF—cæ²Ğ¢gVæ7F–öâ&VæFW$f–ææ6W2‚’²6öç7B6öÖÖ—GFVBÒ7FFRç&öGV7F–öç2æf–ÇFW"‡Óâç7FGW2ÓÓÒt–â&öGV7F–öâr’ç&VGV6R‚‡2Ç’Óâ2²ç&VÖ–æ–æt6÷7BÂ“²&WGW&âG·vT†VFW"‚uF†R&öö·2rÂtf–ææ6W2rÂtWfW'’6†&vRæB–ÖVçB—2&V6÷&FVBöæ6RÂv—F‚—G2&ö¦V7B÷"WfVçB&VfW&Væ6Râr—Ö²ÆF—b6Æ73Ò&w&–BF‡&VR#ãÆ'F–6ÆR6Æ73Ò&6&B7FBÖ6&B#ãÇ7â6Æ73Ò&ÖWG&–2ÖÆ&VÂ#ä66ƒÂ÷7ããÇ7G&öæsâG¶ÖöæW’‡7FFRæ66‚—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆR6Æ73Ò&6&B7FBÖ6&B#ãÇ7â6Æ73Ò&ÖWG&–2ÖÆ&VÂ#ä6öÖÖ—GFVB6÷7G3Â÷7ããÇ7G&öæsâG¶ÖöæW’†6öÖÖ—GFVB—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆR6Æ73Ò&6&B7FBÖ6&B#ãÇ7â6Æ73Ò&ÖWG&–2ÖÆ&VÂ#åvVV¶Ç’÷fW&†VCÂ÷7ããÇ7G&öæsâG¶ÖöæW’‡7FFRçvVV¶Ç”÷fW&†VB—ÓÂ÷7G&öæsãÂö'F–6ÆSãÂöF—cãÆF—b6Æ73Ò'6V7F–öâ×F—FÆR#ãÆƒ#åG&ç67F–öâ†—7F÷'“Âöƒ#ãÂöF—cãÆF—b6Æ73Ò&6&B#âG·7FFRçG&ç67F–öç2æÆVæwF‚ò7FFRçG&ç67F–öç2æÖ‡G‚ÓâÆF—b6Æ73Ò&ÆVFvW"×&÷r#ãÆF—cãÇ7G&öæsâG¶W62‡G‚æ6FVv÷'’—ÓÂ÷7G&öæsãÆF—b6Æ73Ò&FWF–Â#åvVV²G·G‚çvVV·Ò+rG¶W62‡G‚æFWF–Â—ÒG·G‚æWfVçD–Bò+rG·G‚æWfVçD–GÖ¢rwÓÂöF—cãÂöF—cãÇ7G&öær6Æ73Ò"G·G‚æÖ÷VçBãÒòvvööBr¢v&BwÒ#âG·G‚æÖ÷VçBãÒòr²r¢rwÒG¶ÖöæW’‡G‚æÖ÷VçB—ÓÂ÷7G&öæsãÂöF—cæ’æ¦ö–â‚rr’¢sÇäæòG&ç67F–öç2–WBãÂ÷âwÓÂöF—cæ²Ğ¢gVæ7F–öâæWw5&÷r†—FVÒ’²&WGW&âÆ'F–6ÆR6Æ73Ò&æWw2×&÷rG¶—FVÒç&VBòrr¢wVç&VBwÒ#ãÆF—cãÆƒ3âG¶W62†—FVÒçF—FÆR—ÓÂöƒ3ãÇâG¶W62†—FVÒçFW‡B—ÓÂ÷âG¶—FVÒæ7F–öâòÆ'WGFöâ6Æ73Ò'FW‡BÖ'WGFöâ"FFÖæWw2Ö7F–öãÒ"G¶—FVÒæ–GÒ#âG¶—FVÒæ7F–öâæöffW"òuf–WröffW"r¢—FVÒæ7F–öâæFV6—6–öâòtÖ¶RFV6—6–öâr¢—FVÒæ7F–öâç&W÷'Bòuf–Wr&W÷'Br¢t÷VâwÓÂö'WGFöãæ¢rwÓÂöF—cãÇF–ÖSåvVV²G¶—FVÒçvVV·ÓÂ÷F–ÖSãÂö'F–6ÆSæ²Ğ¢gVæ7F–öâ&VæFW$æWw2‚’²&WGW&âG·vT†VFW"‚t–æGW7G'’v—&RrÂtæWw2rÂt7F–öæ&ÆR6fVBWfVçG2â&VF–ær7F÷'’æWfW"—2ÖöæW’÷"Gfæ6W2F–ÖRâr—ÓÆF—b6Æ73Ò&6&B#âG·7FFRææWw2æÖ†æWw5&÷r’æ¦ö–â‚rr—ÓÂöF—cæ²Ğ¢gVæ7F–öâ&VæFW%6WGF–æw2‚’²&WGW&âG·vT†VFW"‚tÆö6ÂvÖRFFrÂu6fRÂ6WGF–æw2b7W÷'BrÂtWF÷6fW2Æ—fR–âF†—2'&÷w6W"öâF†—2FWf–6RâW‡÷'B&6·Wv†VâÖ÷f–ærFWf–6W2âr—ÓÆF—b6Æ73Ò&w&–BGvò#ãÆF—b6Æ73Ò&6&B#ãÆƒ#å&÷FV7B–÷W"&öw&W73Âöƒ#ãÇä–×÷'BfÆ–FFW2f–ÆRæB&6·2WF†R7W'&VçB6fR&Vf÷&R&WÆ6–ær—BãÂ÷ãÆF—b6Æ73Ò&'WGFöâ×&÷r#ãÆ'WGFöâ6Æ73Ò&'WGFöâ6V6öæF'’"–CÒ&W‡÷'B×6fR#äW‡÷'B6fSÂö'WGFöããÆ'WGFöâ6Æ73Ò&'WGFöâ6V6öæF'’"–CÒ&–×÷'B×6fR#ä–×÷'B6fSÂö'WGFöããÆ'WGFöâ6Æ73Ò&'WGFöâFævW""–CÒ'&W6WBÖvÖR#å&W6WBvÖSÂö'WGFöããÂöF—cãÂöF—cãÆF—b6Æ73Ò&6&B#ãÆƒ#å7W÷'BæVÃÂöƒ#ãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãä'V–ÆBfW'6–öãÂ÷7ããÇ7G&öæsâG´%T”ÄEõdU%4”ôçÓÂ÷7G&öæsãÂöF—cãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãå6fRfW'6–öãÂ÷7ããÇ7G&öæsâG·7FFRçfW'6–öçÓÂ÷7G&öæsãÂöF—cãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãäÆ7B÷÷'GVæ—G’6†V6³Â÷7ããÇ7G&öæsåvVV²G·7FFRæ÷÷'GVæ—G”6Æö6²æÆ7D6†V6µvVV·ÓÂ÷7G&öæsãÂöF—cãÆF—b6Æ73Ò'7VÖÖ'’×&÷r#ãÇ7ãäæW‡Bæ÷&ÖÂ6†V6³Â÷7ããÇ7G&öæsåvVV²G·7FFRæ÷÷'GVæ—G”6Æö6²ææW‡D6†V6µvVV·ÓÂ÷7G&öæsãÂöF—cãÇ6Æ73Ò&×WFVB#ãÇ7G&öæsäÆFW7B66†VGVÆW"æ÷FS£Â÷7G&öæsâG¶W62‡7FFRæ÷÷'GVæ—G”6Æö6²ç6¶—&V6öâ—ÓÂ÷ãÂöF—cãÂöF—cæ²Ğ¢gVæ7F–öâ&VæFW%vR‚’²&WGW&â‡²F6†&ö&C¢&VæFW$F6†&ö&BÂ&öGV7F–öç3¢&VæFW%&öGV7F–öç2Â'W6–æW73¢&VæFW$'W6–æW72Â6FÆös¢&VæFW$6FÆörÂ6&VW#¢&VæFW$6&VW"Âf–ææ6W3¢&VæFW$f–ææ6W2ÂæWw3¢&VæFW$æWw2Â6WGF–æw3¢&VæFW%6WGF–æw2Õ·7FFRæ7F—fUvUÒÇÂ&VæFW$F6†&ö&B’‚“²Ğ ¢gVæ7F–öâ&VæFW"‚’°¢6öç7BÒFö7VÖVçBçVW'•6VÆV7F÷"‚r6r“²–b‚7FFRç7GVF–ôæÖR’²æ–ææW$…DÔÂÒ&VæFW%6WGW‚“²&–æDWfVçG2‚“²&WGW&ã²Ğ¢6öç7BæbÒµ²vF6†&ö&BrÂtF6†&ö&BuÒÅ²w&öGV7F–öç2rÂu&öGV7F–öç2uÒÅ²v'W6–æW72rÆ÷÷'GVæ—F–W2G¶÷VäöffW'2‚’æÆVæwF‚ò‚G¶÷VäöffW'2‚’æÆVæwF‡Ò–¢rwÖÒÅ²v6FÆörrÂt6FÆörb&–v‡G2uÒÅ²v6&VW"rÂt6&VW"&öw&W72uÒÅ²vf–ææ6W2rÂtf–ææ6W2uÒÅ²væWw2rÆæWw2G·7FFRææWw2æf–ÇFW"†âÓââç&VB’æÆVæwF‚ò‚G·7FFRææWw2æf–ÇFW"†âÓââç&VB’æÆVæwF‡Ò–¢rwÖÒÅ²w6WGF–æw2rÂu6fRb7W÷'BuÕÓ²6öç7B–V"ÒÖF‚æfÆö÷"‚‡7FFRçvVV²Ò’òS"’²²6öç7BvVV´öe–V"Ò‚‡7FFRçvVV²Ò’RS"’²°¢æ–ææW$…DÔÂÒÆF—b6Æ73Ò&vÖR×6†VÆÂ#ãÆ6–FR6Æ73Ò'6–FV&"#ãÆF—b6Æ73Ò&'&æB#ãÆF—b6Æ73Ò&'&æBÖÖ&²#å45$TTâÇ7ãäTÕ•$SÂ÷7ããÂöF—cãÆF—b6Æ73Ò'7GVF–òÖÆ&VÂ#âG¶W62‡7FFRç7GVF–ôæÖR—ÓÂöF—cãÂöF—cãÆæb6Æ73Ò&æb"&–ÖÆ&VÃÒ$Ö–âæf–vF–öâ#âG¶æbæÖ‚…¶–BÆÆ&VÅÒ’ÓâÆ'WGFöâ6Æ73Ò"G·7FFRæ7F—fUvRÓÓÒ–Bòv7F—fRr¢rwÒ"FF×vSÒ"G¶–GÒ#âG¶Æ&VÇÓÂö'WGFöãæ’æ¦ö–â‚rr—ÓÂöæcãÆF—b6Æ73Ò'6fRÖæ÷FR#äWF÷6fVB–âF†—2'&÷w6W#ÂöF—cãÂö6–FSãÆF—b6Æ73Ò'v÷&·76R#ãÆ†VFW"6Æ73Ò'F÷&"#ãÆF—b6Æ73Ò&6Æö6²#ãÆF—cãÇ7â6Æ73Ò&ÖWG&–2ÖÆ&VÂ#å7GVF–ò6ÆVæF#Â÷7ããÇ7â6Æ73Ò&ÖWG&–2×fÇVR#å–V"G·–V'Ò+rvVV²G·vVV´öe–V'ÓÂ÷7ããÂöF—cãÆF—cãÇ7â6Æ73Ò&ÖWG&–2ÖÆ&VÂ#ä66ƒÂ÷7ããÇ7â6Æ73Ò&ÖWG&–2×fÇVRG·7FFRæ66‚ÂSòv&Br¢rwÒ#âG¶ÖöæW’‡7FFRæ66‚—ÓÂ÷7ããÂöF—cãÆF—cãÇ7â6Æ73Ò&ÖWG&–2ÖÆ&VÂ#äW‡W&–Væ6SÂ÷7ããÇ7â6Æ73Ò&ÖWG&–2×fÇVR#âG·7FFRç&öw&W76–öâæW‡W&–Væ6WÓÂ÷7ããÂöF—cãÂöF—cãÆ'WGFöâ6Æ73Ò&'WGFöâ"–CÒ&æW‡B×vVV²#äæW‡BvVV²(i#Âö'WGFöããÂö†VFW#ãÆÖ–â6Æ73Ò&Ö–â#âG·&VæFW%vR‚—ÓÂöÖ–ããÂöF—cãÂöF—cæ°¢&–æDWfVçG2‚“²WFFU&ö¦V7E7VÖÖ'’‚“°¢Ğ ¢gVæ7F–öâW‡÷'E6fR‚’²6öç7B&Æö"ÒæWr&Æö"…´¥4ôâç7G&–æv–g’‡²ââç7FFRÂGfæ6–æs¢fÇ6RÒÂçVÆÂÂ"•ÒÂ²G—S¢vÆ–6F–öâö§6öârÒ“²6öç7BW&ÂÒU$Âæ7&VFTö&¦V7EU$Â†&Æö"“²6öç7BÒFö7VÖVçBæ7&VFTVÆVÖVçB‚vr“²æ‡&VbÒW&Ã²æF÷væÆöBÒ67&VVâÖV×—&RÒG·7FFRç7GVF–ôæÖRç&WÆ6R‚õµæ×£Ó•Ò²öv’ÂrÒr’çFôÆ÷vW$66R‚—Ò×vVV²ÒG·7FFRçvVV·Òæ§6öæ²æ6Æ–6²‚“²U$Âç&Wfö¶Tö&¦V7EU$Â‡W&Â“²6†÷uFö7B‚u6fRW‡÷'FVBFò–÷W"F÷væÆöG2föÆFW"âr“²Ğ¢gVæ7F–öâ–×÷'E6fR†f–ÆR’²6öç7B&VFW"ÒæWrf–ÆU&VFW"‚“²&VFW"æöæÆöBÒ‚’Óâ²G'’²6öç7B'6VBÒ¥4ôâç'6R‡&VFW"ç&W7VÇB“²–b‚'6VBÇÂG—Vöb'6VBç7GVF–ôæÖRÓÒw7G&–ærrÇÂçVÖ&W"æ—4f–æ—FR‡'6VBçvVV²’ÇÂçVÖ&W"æ—4f–æ—FR‡'6VBæ66‚’ÇÂ'&’æ—4'&’‡'6VBç&öGV7F–öç2’’F‡&÷ræWrW'&÷"‚vÖ—76–ær&WV—&VBvÖRFFr“²6öç7B7W'&VçBÒÆö6Å7F÷&vRævWD—FVÒ…4dUô´U’“²–b†7W'&VçB’Æö6Å7F÷&vRç6WD—FVÒ„$4µUô´U’Â7W'&VçB“²7FFRÒÖ–w&FU7FFR‡'6VB“²6fU7FFR‚“²&VæFW"‚“²6†÷uFö7B‚u6fR–×÷'FVBæB&Wf–÷W26fR&6¶VBWâr“²Ò6F6‚†R’²6†÷uFö7B†–×÷'Bf–ÆVC¢G¶RæÖW76vWÒæ“²ÒÓ²&VFW"ç&VD5FW‡B†f–ÆR“²Ğ ¢gVæ7F–öâ&–æDWfVçG2‚’°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚r76WGWÖf÷&Òr“òæFDWfVçDÆ—7FVæW"‚w7V&Ö—BrÂRÓâ²Rç&WfVçDFVfVÇB‚“²7FFRç7GVF–ôæÖRÒæWrf÷&ÔFF†Ræ7W'&VçEF&vWB’ævWB‚w7GVF–ôæÖRr’çG&–Ò‚“²–b‚7FFRç7GVF–ôæÖR’&WGW&ã²&V6÷&EG&ç67F–öâ„T4ôäôÕ’ç7F'F–æt66‚Âu7F'F–ær6—FÂrÂtf÷VæFW"gVæF–ærFW÷6—FVBr“²7FFRæ66‚ÒT4ôäôÕ’ç7F'F–æt66ƒ²6fU7FFR‚“²&VæFW"‚“²Ò“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FF×vUÒr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²7FFRæ7F—fUvRÒ"æFF6WBçvS²–b‡7FFRæ7F—fUvRÓÓÒvæWw2r’7FFRææWw2æf÷$V6‚†âÓâ²âç&VBÒG'VS²Ò“²6fU7FFR‚“²&VæFW"‚“²Ò’“°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚r6æW‡B×vVV²r“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂRÓâ²Ræ7W'&VçEF&vWBæF—6&ÆVBÒG'VS²Gfæ6UvVV²‚“²Ò“°¢6öç7Bf÷&ÒÒFö7VÖVçBçVW'•6VÆV7F÷"‚r6w&VVæÆ–v‡BÖf÷&Òr“²f÷&ÓòæFDWfVçDÆ—7FVæW"‚w7V&Ö—BrÂRÓâ²Rç&WfVçDFVfVÇB‚“²w&VVæÆ–v‡B†Ræ7W'&VçEF&vWB“²Ò“²f÷&ÓòæFDWfVçDÆ—7FVæW"‚v6†ævRrÂRÓâ²–b†RçF&vWBææÖRÓÓÒvf÷&ÖBrÇÂRçF&vWBææÖRÓÓÒvvVç&Rr’WFFTG&gDf÷%6VÆV7F–öâ†f÷&Ò“²WFFU&ö¦V7E7VÖÖ'’‚“²Ò“°¢f÷&ÓòæVÆVÖVçG2ææÖVD—FVÒ‚wF—FÆRr“òæFDWfVçDÆ—7FVæW"‚v–çWBrÂRÓâ²6öç7BG&gBÒVç7W&UF—FÆTG&gB†f÷&ÒæVÆVÖVçG2ææÖVD—FVÒ‚vf÷&ÖBr’çfÇVRÂf÷&ÒæVÆVÖVçG2ææÖVD—FVÒ‚vvVç&Rr’çfÇVR“²G&gBçF—FÆRÒRçF&vWBçfÇVS²G&gBç6÷W&6RÒvÖçVÂs²6fU7FFR‚“²Ò“°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚r6vVæW&FR×F—FÆRr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâvVæW&FTæ÷F†W$G&gEF—FÆR†f÷&Ò’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FFÖFV6—6–öåÒr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6†ö÷6U&öGV7F–öäFV6—6–öâ†"æFF6WBç&öGV7F–öâÂ"æFF6WBæFV6—6–öâ’’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FFÖ66WBÖöffW%Òr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ66WD÷÷'GVæ—G’†"æFF6WBæ66WDöffW"’’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FFÖFV6Æ–æRÖöffW%Òr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFV6Æ–æT÷÷'GVæ—G’†"æFF6WBæFV6Æ–æTöffW"’’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FFÖ6÷VçFW"ÖöffW%Òr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6÷VçFW$÷÷'GVæ—G’†"æFF6WBæ6÷VçFW$öffW"’’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FFÖ÷VâÖöffW%Òr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²7FFRæ7F—fUvRÒv'W6–æW72s²6fU7FFR‚“²&VæFW"‚“²Fö7VÖVçBçVW'•6VÆV7F÷"†6öffW"ÒG¶"æFF6WBæ÷VäöffW'Ö“òç67&öÆÄ–çFõf–Wr‚“²Ò’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FFÖæWw2Ö7F–öåÒr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²6öç7BâÒ7FFRææWw2æf–æB‡‚Óâ‚æ–BÓÓÒ"æFF6WBææWw47F–öâ“²–b‚ãòæ7F–öâ’&WGW&ã²âç&VBÒG'VS²7FFRæ7F—fUvRÒâæ7F–öâçvS²6fU7FFR‚“²&VæFW"‚“²–b†âæ7F–öâæöffW"’Fö7VÖVçBçVW'•6VÆV7F÷"†6öffW"ÒG¶âæ7F–öâæöffW'Ö“òç67&öÆÄ–çFõf–Wr‚“²Ò’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FF×VæÆö6²ÖvVç&UÒr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâVæÆö6´vVç&R†"æFF6WBçVæÆö6´vVç&R’’“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚u¶FFÖ7F–öãÒ&6†ævRÖvöÂ%Òr’æf÷$V6‚†"Óâ"æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²7FFRç&öw&W76–öâç6VÆV7FVDvöÂ²³²6fU7FFR‚“²&VæFW"‚“²Ò’“°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚u¶FFÖ7F–öãÒ&F—6Ö—72ÖÖ–w&F–öâ%Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²7FFRç&öw&W76–öâæÖ–w&F–öå&V6ÒçVÆÃ²6fU7FFR‚“²&VæFW"‚“²Ò“°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚r6W‡÷'B×6fRr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂW‡÷'E6fR“²Fö7VÖVçBçVW'•6VÆV7F÷"‚r6–×÷'B×6fRr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFö7VÖVçBçVW'•6VÆV7F÷"‚r76fRÖf–ÆRr’æ6Æ–6²‚’“°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚r7&W6WBÖvÖRr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²–b†6öæf—&Ò‚u&W6WB67&VVâV×—&SòW‡÷'Bf—'7B–b–÷RvçBFò¶VWF†—27GVF–òâr’’²Æö6Å7F÷&vRç6WD—FVÒ„$4µUô´U’Â¥4ôâç7G&–æv–g’‡7FFR’“²Æö6Å7F÷&vRç&VÖ÷fT—FVÒ…4dUô´U’“²7FFRÒFVfVÇE7FFR‚“²&VæFW"‚“²ÒÒ“°¢Ğ¢gVæ7F–öâ6†÷uFö7B†ÖW76vR’²6öç7BFö7BÒFö7VÖVçBçVW'•6VÆV7F÷"‚r7Fö7Br“²Fö7BçFW‡D6öçFVçBÒÖW76vS²Fö7Bæ6Æ74Æ—7BæFB‚w6†÷rr“²6ÆV%F–ÖV÷WB‡Fö7EF–ÖW"“²Fö7EF–ÖW"Ò6WEF–ÖV÷WB‚‚’ÓâFö7Bæ6Æ74Æ—7Bç&VÖ÷fR‚w6†÷rr’Â#ƒ“²Ğ¢Fö7VÖVçBçVW'•6VÆV7F÷"‚r76fRÖf–ÆRr’æFDWfVçDÆ—7FVæW"‚v6†ævRrÂRÓâ²–b†RçF&vWBæf–ÆW5³Ò’–×÷'E6fR†RçF&vWBæf–ÆW5³Ò“²RçF&vWBçfÇVRÒrs²Ò“°¢&VæFW"‚“°¢v–æF÷rå67&VVäV×—&UFW7BÒ²FVfVÇE7FFRÂ7FvTf÷"ÂFWFW&Ö–æ—7F–4æö—6RÂÖ–w&FU7FFRÂæ÷&ÖÆ—¦UF—FÆRÂF—FÆT6æF–FFW2ÂvVæW&FUF—FÆRÂ6öçF–çVF–öåF—FÆRÂ&VÆV6U&WfVçVTf÷%vVV²Â66†VGVÆT÷÷'GVæ—G’ÂVÆ–v–&ÆT÷÷'GVæ—G•FV×ÆFW2ÂU…U$”Tä4UôÔ”ÄU5DôäU2ÂT4ôäôÕ’ÂDDÂtTå$U2Ó°§Ò’‚“°
+      migrated.opportunityClock.skipReason = 'Save migrated; an appropriate offer is due now.';
+    }
+    return migrated;
+  }
+
+  function saveState() { localStorage.setItem(SAVE_KEY, JSON.stringify({ ...state, advancing: false })); }
+  function nextId(prefix) { return `${prefix}-${state.nextId++}`; }
+  function recordTransaction(amount, category, detail, productionId = null, eventId = null) {
+    state.cash += amount;
+    const tx = { id: nextId('tx'), week: state.week, amount: Math.round(amount), category, detail, productionId, eventId };
+    state.transactions.unshift(tx); state.transactions = state.transactions.slice(0, 300); return tx.id;
+  }
+  function addNews(title, text, category = 'studio', eventId = null, action = null) {
+    const item = { id: nextId('news'), week: state.week, title, text, category, eventId, action, read: false };
+    state.news.unshift(item); state.news = state.news.slice(0, 120); return item.id;
+  }
+
+  function deterministicNoise(id, salt = 0) { let n = 0; for (const ch of `${id}-${salt}`) n = (n * 31 + ch.charCodeAt(0)) % 9973; return (n % 17) - 8; }
+  function stageFor(progress, duration) { const ratio = progress / duration; if (ratio < .2) return 'Development'; if (ratio < .62) return 'Filming'; if (ratio < .9) return 'Post-production'; return 'Release'; }
+  function normalizeTitle(title) { return String(title || '').trim().replace(/\s+/g, ' ').toLocaleLowerCase(); }
+  function talentFits(person, genre) { return (person.fits || [person.fit]).includes(genre); }
+
+  function titleCandidates(format, genre) {
+    const bank = GENRES[genre]?.words || GENRES.Comedy.words;
+    const suffixes = format === 'Movie' ? ['', ' at Midnight', ' in Bellweather', ' Protocol', ' Returns'] : ['', ' County', ' Files', ' Division', ' Stories'];
+    return [...new Set(bank.flatMap(word => suffixes.map(suffix => `${word}${suffix}`)))];
+  }
+  function generateTitle(format, genre, excludedTitle = '') {
+    const candidates = titleCandidates(format, genre);
+    const existing = new Set(state.productions.map(prod => normalizeTitle(prod.title)));
+    const recent = new Set((state.titleGenerator.history || []).map(normalizeTitle));
+    const excluded = normalizeTitle(excludedTitle);
+    const start = (state.titleGenerator.counter * 7 + state.week * 3 + state.nextId) % candidates.length;
+    let chosen = '';
+    for (let i = 0; i < candidates.length; i++) {
+      const candidate = candidates[(start + i) % candidates.length];
+      if (!existing.has(normalizeTitle(candidate)) && !recent.has(normalizeTitle(candidate)) && normalizeTitle(candidate) !== excluded) { chosen = candidate; break; }
+    }
+    if (!chosen) chosen = `${candidates[start] || `${genre} ${format}`} ${state.titleGenerator.counter + 2}`;
+    state.titleGenerator.counter++; state.titleGenerator.history = [...(state.titleGenerator.history || []), chosen].slice(-36); return chosen;
+  }
+  function ensureTitleDraft(format = 'Movie', genre = 'Comedy') {
+    if (!state.titleGenerator.draft) { state.titleGenerator.draft = { title: generateTitle(format, genre), source: 'generated', format, genre }; saveState(); }
+    return state.titleGenerator.draft;
+  }
+  function continuationTitle(parentTitle, kind, number) { const clean = String(parentTitle || '').replace(/\s+[â€”-]\s+Season\s+\d+$/i, '').replace(/\s+\d+$/i, '').trim(); return kind === 'season' ? `${clean} â€” Season ${number}` : `${clean} ${number}`; }
+  function unrelatedTitleDuplicate(title, parentProductionId = null) { const normalized = normalizeTitle(title); return state.productions.some(p => p.id !== parentProductionId && normalizeTitle(p.title) === normalized); }
+
+  function nextExperienceMilestone() { return EXPERIENCE_MILESTONES.find(x => x > state.progression.experience) || null; }
+  function awardExperience(amount, reason, eventId = null) {
+    state.progression.experience += amount;
+    const newlyReached = EXPERIENCE_MILESTONES.filter(x => x <= state.progression.experience && !state.progression.claimedMilestones.includes(x));
+    for (const milestone of newlyReached) {
+      state.progression.claimedMilestones.push(milestone); state.progression.pendingGenreChoices++;
+      addNews('A new genre choice is ready', `${milestone} Studio Experience reached. Choose any remaining genre in Career Progress.`, 'progress', eventId, { page: 'career' });
+    }
+    return newlyReached.length;
+  }
+  function unlockGenre(genre) {
+    if (!GENRES[genre] || state.progression.unlockedGenres.includes(genre) || state.progression.pendingGenreChoices < 1) return;
+    state.progression.unlockedGenres.push(genre); state.progression.pendingGenreChoices--;
+    state.titleGenerator.draft = { title: generateTitle('Movie', genre), source: 'generated', format: 'Movie', genre };
+    addNews(`${genre} capability unlocked`, `${genre} is immediately available with concepts, talent matches, and title generation.`, 'progress', null, { page: 'productions' });
+    saveState(); state.activePage = 'productions'; render(); showToast(`${genre} is ready for production.`);
+  }
+
+  function releaseRevenueForWeek(prod, elapsed) {
+    const appeal = clamp((prod.audienceScore * .58 + prod.awareness * .42) / 100, .2, .95);
+    const rules = ECONOMY.release[prod.format]; let result;
+    if (prod.format === 'Movie' && elapsed < rules.theatricalWeeks) {
+      const grossSales = Math.round(prod.baseCost * (rules.grossBase + appeal * rules.grossAppeal) * Math.pow(rules.theatricalDecay, elapsed));
+      result = { channel: 'theatrical', grossSales, studioRevenue: Math.round(grossSales * rules.studioShare) };
+    } else {
+      const e = prod.format === 'Movie' ? elapsed - rules.theatricalWeeks : elapsed;
+      const studioRevenue = Math.round(prod.baseCost * (rules.digitalBase + appeal * rules.digitalAppeal) * Math.pow(rules.digitalDecay, e));
+      result = { channel: 'digital', grossSales: studioRevenue, studioRevenue };
+    }
+    if ((prod.demandBoostRemaining || 0) > 0) result.studioRevenue = Math.round(result.studioRevenue * 1.18);
+    return result;
+  }
+
+  function productionExplanation(prod) {
+    const fits = [prod.talent.writer, prod.talent.director, prod.talent.lead].filter(p => talentFits(p, prod.genre)).length;
+    const worked = [];
+    const held = [];
+    if (fits >= 2) worked.push('The creative team matched the genre well.'); else held.push('Several hires were working outside their strongest genre.');
+    if (prod.concept.strength >= 75) worked.push('The central concept provided a strong foundation.'); else held.push('The premise was workable but not especially distinctive.');
+    if (prod.awareness >= 55) worked.push('The campaign created strong awareness.'); else held.push('Limited awareness reduced early audience reach.');
+    if (prod.decision?.choice === 'rehearse') worked.push('Extra rehearsal improved finished quality.');
+    if (prod.decision?.choice === 'audience') worked.push('Audience-focused promotion improved awareness.');
+    return { worked: worked.join(' '), heldBack: held.join(' ') || 'No single major weakness dominated the result.' };
+  }
+
+  function finishProduction(prod) {
+    if (!prod.decision) prod.decision = { choice: 'preserve', label: 'Keep the current plan', cost: 0, qualityBonus: 0, awarenessBonus: 0, appliedWeek: state.week, automatic: true };
+    const people = [prod.talent.writer, prod.talent.director, prod.talent.lead];
+    const ability = people.reduce((s, p) => s + p.ability, 0) / 3;
+    const fit = people.reduce((s, p) => s + (talentFits(p, prod.genre) ? 100 : 58), 0) / 3;
+    const reliability = people.reduce((s, p) => s + p.reliability, 0) / 3;
+    const budgetBoost = { Small: 0, Medium: 5, Large: 9 }[prod.budgetSize];
+    prod.quality = Math.round(clamp(prod.concept.strength * .31 + ability * .34 + fit * .2 + reliability * .15 + budgetBoost + (prod.decision.qualityBonus || 0) + deterministicNoise(prod.id), 35, 96));
+    prod.awareness = Math.round(clamp(prod.awareness + (prod.decision.awarenessBonus || 0), 20, 96));
+    prod.criticScore = Math.round(clamp(prod.quality + deterministicNoise(prod.id, 2), 28, 98));
+    prod.audienceScore = Math.round(clamp(prod.quality * .82 + prod.awareness * .13 + deterministicNoise(prod.id, 3), 30, 97));
+    prod.status = 'Released'; prod.stage = 'Released'; prod.releaseWeek = state.week; prod.revenueWeeksRemaining = ECONOMY.release[prod.format].earningWeeks;
+    state.team.busyProductionId = null; if (!state.catalog.includes(prod.id)) state.catalog.push(prod.id);
+    const explanation = productionExplanation(prod);
+    const earned = prod.experienceAwarded ? 0 : 100;
+    if (earned) { prod.experienceAwarded = 100; awardExperience(100, `${prod.title} completed`, prod.id); }
+    prod.releaseReport = { preliminary: true, worked: explanation.worked, heldBack: explanation.heldBack, forecastLow: prod.forecastLow, forecastHigh: prod.forecastHigh, experience: earned };
+    addNews(`${prod.title} released: preliminary report ready`, `Quality ${prod.quality}, awareness ${prod.awareness}, audience ${prod.audienceScore}. Revenue is still arriving.`, 'release', prod.id, { page: 'catalog', report: prod.id });
+  }
+
+  function processReleaseRevenue(prod) {
+    if (prod.revenueWeeksRemaining <= 0) return;
+    const elapsed = ECONOMY.release[prod.format].earningWeeks - prod.revenueWeeksRemaining;
+    const result = releaseRevenueForWeek(prod, elapsed);
+    if (result.channel === 'theatrical') prod.boxOfficeGross = (prod.boxOfficeGross || 0) + result.grossSales; else prod.digitalGross = (prod.digitalGross || 0) + result.studioRevenue;
+    prod.lifetimeRevenue = (prod.lifetimeRevenue || 0) + result.studioRevenue;
+    recordTransaction(result.studioRevenue, 'Operating revenue', `${prod.title}: ${result.channel === 'theatrical' ? 'studio share of weekly box office' : 'digital audience receipts'}`, prod.id);
+    prod.revenueWeeksRemaining--; if (prod.demandBoostRemaining > 0) prod.demandBoostRemaining--;
+    if (prod.revenueWeeksRemaining === 0 && prod.releaseReport) { prod.releaseReport.preliminary = false; addNews(`${prod.title} lifetime release report finalized`, `The original release window closed at ${money(prod.lifetimeRevenue)} in studio revenue.`, 'release', prod.id, { page: 'catalog', report: prod.id }); }
+  }
+
+  const OPPORTUNITY_TEMPLATES = {
+    script: { type: 'script-assessment', title: 'Paid script assessment', client: 'Juniper Pictures', description: 'Read a fictional screenplay and deliver a short strengths-and-risks report.', capacity: 'office', duration: 1, cost: 0, total: 18000, advance: 0, experience: 8, cooldown: 5 },
+    commercial: { type: 'local-commercial', title: 'Local commercial', client: 'Bellweather Market', description: 'Film and deliver a concise regional campaign spot.', capacity: 'team', duration: 2, cost: 8000, total: 40000, advance: 12000, experience: 20, cooldown: 5 },
+    returning: { type: 'returning-client', title: 'Returning-client commission', client: 'Bellweather Market', description: 'A satisfied client wants a larger follow-up campaign.', capacity: 'team', duration: 2, cost: 10000, total: 55000, advance: 15000, experience: 24, cooldown: 7 },
+    streaming: { type: 'streaming-license', title: 'Fixed-term streaming offer', description: 'License one finished title for a fixed subscription-streaming term.', capacity: 'catalog', duration: 26, cost: 0, total: 0, advance: 0, experience: 0, cooldown: 6 },
+    screening: { type: 'paid-screening', title: 'Paid repertory screening', client: 'Lantern Hall', description: 'Permit one public screening while retaining all other rights.', capacity: 'catalog', duration: 1, cost: 0, total: 0, advance: 0, experience: 0, cooldown: 5 },
+    rediscovery: { type: 'catalog-rediscovery', title: 'Catalog rediscovery', client: 'Archive Circle', description: 'A curated feature can renew audience interest and add a one-time exhibition fee.', capacity: 'catalog', duration: 4, cost: 0, total: 0, advance: 0, experience: 0, cooldown: 7 }
+  };
+
+  function openOffers() { return state.opportunities.filter(o => o.status === 'open'); }
+  function hasRecentType(type, cooldown) { return state.opportunities.some(o => o.type === type && state.week - o.createdWeek < cooldown); }
+  function eligibleOpportunityTemplates() {
+    const catalog = state.catalog.map(id => state.productions.find(p => p.id === id)).filter(Boolean);
+    const list = [];
+    if (state.officeBusyUntil <= state.week && !hasRecentType('script-assessment', 5)) list.push(OPPORTUNITY_TEMPLATES.script);
+    if (!state.team.busyProductionId && !state.team.busyContractId && !hasRecentType('local-commercial', 5)) list.push(OPPORTUNITY_TEMPLATES.commercial);
+    if (!state.team.busyProductionId && !state.team.busyContractId && state.progression.completedClientJobs > 0 && !hasRecentType('returning-client', 7)) list.push(OPPORTUNITY_TEMPLATES.returning);
+    if (catalog.length && !hasRecentType('streaming-license', 6)) list.push(OPPORTUNITY_TEMPLATES.streaming);
+    if (catalog.length && !hasRecentType('paid-screening', 5)) list.push(OPPORTUNITY_TEMPLATES.screening);
+    if (catalog.length && !hasRecentType('catalog-rediscovery', 7)) list.push(OPPORTUNITY_TEMPLATES.rediscovery);
+    return list;
+  }
+
+  function createOpportunity(template) {
+    const eventId = nextId('event');
+    const catalog = state.catalog.map(id => state.productions.find(p => p.id === id)).filter(Boolean);
+    const title = catalog.length ? catalog[Math.abs(deterministicNoise(eventId, 4)) % catalog.length] : null;
+    let total = template.total;
+    let buyer = null;
+    if (template.type === 'streaming-license') {
+      buyer = DATA.buyers.find(b => b.interests.includes(title.genre)) || DATA.buyers[0];
+      total = Math.min(buyer.budget, Math.round(36000 + title.audienceScore * 800));
+    } else if (template.type === 'paid-screening') total = 12000 + Math.max(0, title.audienceScore - 50) * 180;
+    else if (template.type === 'catalog-rediscovery') total = 18000 + Math.max(0, title.criticScore - 50) * 120;
+    const offer = {
+      id: eventId, type: template.type, title: template.title, client: buyer?.name || template.client,
+      description: template.description, capacity: template.capacity, duration: template.duration, directCost: template.cost,
+      totalPayment: Math.round(total), advance: Math.round(template.advance || 0), deliveryPayment: Math.round(total - (template.advance || 0)),
+      experience: template.experience, createdWeek: state.week, expiresWeek: state.week + 4, status: 'open', productionId: title?.id || null,
+      buyerId: buyer?.id || null, countered: false, transactionIds: []
+    };
+    state.opportunities.push(offer); state.opportunityClock.lastCreatedWeek = state.week;
+    addNews(`New opportunity: ${offer.title}`, `${offer.client} offers ${money(offer.totalPayment)}. Review it before Week ${offer.expiresWeek}.`, 'opportunity', eventId, { page: 'business', offer: eventId });
+    return offer;
+  }
+
+  function scheduleOpportunity(force = false) {
+    const clock = state.opportunityClock; clock.lastCheckWeek = state.week;
+    if (openOffers().length >= 3) { clock.skipReason = 'The opportunity board already has three open offers.'; clock.nextCheckWeek = state.week + 1; return null; }
+    if (!force && state.week < clock.nextCheckWeek && state.week - clock.lastCreatedWeek < 6) { clock.skipReason = `Next scheduled market check is Week ${clock.nextCheckWeek}.`; return null; }
+    const eligible = eligibleOpportunityTemplates();
+    if (!eligible.length) { clock.skipReason = 'No feasible offer matched current capacity; another check will occur next week.'; clock.nextCheckWeek = state.week + 1; return null; }
+    let chosen;
+    if (state.week <= 2 || state.opportunities.length === 0) chosen = eligible.find(x => x.type === 'script-assessment') || eligible[0];
+    else chosen = eligible[clock.sequence % eligible.length];
+    clock.sequence++; const offer = createOpportunity(chosen);
+    clock.nextCheckWeek = state.week + 3 + (Math.abs(deterministicNoise(offer.id, 7)) % 3);
+    clock.skipReason = `Offer created; next normal check is Week ${clock.nextCheckWeek}.`; return offer;
+  }
+
+  function rightsConflict(offer) {
+    if (offer.type !== 'streaming-license') return false;
+    return state.licenses.some(l => l.productionId === offer.productionId && l.status === 'active' && l.exclusive && l.endWeek >= state.week);
+  }
+  function acceptOpportunity(id) {
+    const offer = state.opportunities.find(o => o.id === id);
+    if (!offer || offer.status !== 'open' || offer.expiresWeek < state.week) return showToast('That offer is no longer available.');
+    if (offer.capacity === 'office' && state.officeBusyUntil > state.week) return showToast('The business-action slot is already occupied this week.');
+    if (offer.capacity === 'team' && (state.team.busyProductionId || state.team.busyContractId)) return showToast('Production Team A is currently booked.');
+    if (rightsConflict(offer)) return showToast('Conflicting exclusive streaming rights prevent this deal.');
+    if (state.cash < offer.directCost) return showToast(`You need ${money(offer.directCost)} for the quoted direct costs.`);
+    offer.status = 'accepted'; offer.acceptedWeek = state.week;
+    if (offer.directCost) offer.transactionIds.push(recordTransaction(-offer.directCost, 'Client job cost', `${offer.title}: quoted direct costs`, null, offer.id));
+    if (offer.advance) offer.transactionIds.push(recordTransaction(offer.advance, 'Client advance', `${offer.client}: advance included in ${money(offer.totalPayment)} total`, null, offer.id));
+    if (offer.capacity === 'office' || offer.capacity === 'team') {
+      const contract = { id: nextId('contract'), eventId: offer.id, type: offer.type, title: offer.title, client: offer.client, status: 'active', startWeek: state.week, dueWeek: state.week + offer.duration, weeksRemaining: offer.duration, deliveryPayment: offer.deliveryPayment, experience: offer.experience, transactionIds: [] };
+      state.contracts.push(contract); offer.contractId = contract.id;
+      if (offer.capacity === 'office') state.officeBusyUntil = state.week + 1; else state.team.busyContractId = contract.id;
+      addNews(`${offer.title} accepted`, `Delivery is due Week ${contract.dueWeek}; ${money(offer.deliveryPayment)} remains after the advance.`, 'opportunity', offer.id, { page: 'business', offer: offer.id });
+    } else completeCatalogOpportunity(offer);
+    saveState(); render(); showToast(`${offer.title} accepted.`);
+  }
+
+  function completeCatalogOpportunity(offer) {
+    const prod = state.productions.find(p => p.id === offer.productionId);
+    if (!prod || !state.catalog.includes(prod.id)) { offer.status = 'invalid'; return; }
+    offer.status = 'completed'; offer.completedWeek = state.week;
+    if (offer.type === 'streaming-license') {
+      const license = { id: nextId('license'), eventId: offer.id, buyerId: offer.buyerId, buyer: offer.client, productionId: prod.id, title: prod.title, startWeek: state.week, endWeek: state.week + offer.duration, exclusive: true, rights: 'Subscription streaming only', retained: 'Theatrical, screening, purchase, rental, sequel, and future-season rights', status: 'active', fee: offer.totalPayment };
+      state.licenses.push(license); offer.licenseId = license.id;
+    } else if (offer.type === 'catalog-rediscovery') prod.demandBoostRemaining = Math.max(prod.demandBoostRemaining || 0, 4);
+    offer.transactionIds.push(recordTransaction(offer.totalPayment, offer.type === 'streaming-license' ? 'License revenue' : 'Catalog revenue', `${offer.client}: ${offer.title} for ${prod.title}`, prod.id, offer.id));
+    offer.paymentStatus = 'paid';
+    addNews(`${offer.title} completed`, `${prod.title} earned ${money(offer.totalPayment)}. ${offer.type === 'catalog-rediscovery' ? 'Audience receipts receive a four-week interest boost.' : 'The agreed right is recorded in the catalog.'}`, 'opportunity', offer.id, { page: 'catalog', report: prod.id });
+  }
+
+  function declineOpportunity(id) { const o = state.opportunities.find(x => x.id === id); if (!o || o.status !== 'open') return; o.status = 'declined'; o.declinedWeek = state.week; addNews(`${o.title} declined`, 'No payment or reputation penalty was applied.', 'opportunity', o.id); saveState(); render(); }
+  function counterOpportunity(id) {
+    const o = state.opportunities.find(x => x.id === id); if (!o || o.status !== 'open' || o.type !== 'streaming-license' || o.countered) return;
+    o.countered = true; const accepted = deterministicNoise(o.id, 11) >= -2;
+    if (accepted) { o.totalPayment = Math.round(o.totalPayment * 1.1); o.deliveryPayment = o.totalPayment; o.counterResult = `Accepted at ${money(o.totalPayment)}.`; }
+    else { o.counterResult = 'Buyer declined the increase; the original offer remains available.'; }
+    saveState(); render(); showToast(o.counterResult);
+  }
+
+  function processContracts() {
+    for (const contract of state.contracts.filter(c => c.status === 'active')) {
+      contract.weeksRemaining--;
+      if (contract.weeksRemaining <= 0) {
+        contract.status = 'completed'; contract.completedWeek = state.week;
+        const offer = state.opportunities.find(o => o.id === contract.eventId);
+        const txId = recordTransaction(contract.deliveryPayment, 'Client delivery payment', `${contract.client}: ${contract.title} delivered`, null, contract.eventId);
+        contract.transactionIds.push(txId); offer.status = 'completed'; offer.completedWeek = state.week; offer.paymentStatus = 'paid'; offer.transactionIds.push(txId);
+        state.team.busyContractId = state.team.busyContractId === contract.id ? null : state.team.busyContractId;
+        state.progression.completedClientJobs++; awardExperience(contract.experience, `${contract.title} delivered`, contract.eventId);
+        addNews(`${contract.title} delivered and paid`, `${contract.client} paid ${money(contract.deliveryPayment)} on delivery. Studio Experience +${contract.experience}.`, 'opportunity', contract.eventId, { page: 'business', offer: contract.eventId });
+      }
+    }
+  }
+
+  function expireOffersAndLicenses() {
+    for (const o of state.opportunities) if (o.status === 'open' && o.expiresWeek < state.week) { o.status = 'expired'; o.expiredWeek = state.week; addNews(`${o.title} expired`, 'The deadline passed. No payment was made.', 'opportunity', o.id, { page: 'business', offer: o.id }); }
+    for (const l of state.licenses) if (l.status === 'active' && l.endWeek < state.week) { l.status = 'expired'; addNews(`${l.title} streaming term ended`, `${l.buyer}'s subscription-streaming rights expired; all rights are available again.`, 'catalog', l.eventId, { page: 'catalog' }); }
+  }
+
+  function advanceWeek() {
+    if (state.advancing || !state.studioName) return;
+    state.advancing = true; const beforeNews = state.news.length; const beforeCash = state.cash; state.week++;
+    recordTransaction(-state.weeklyOverhead, 'Shared overhead', 'Office, insurance, and core staff');
+    processContracts();
+    for (const prod of state.productions) {
+      if (prod.status === 'In Production') {
+        const weeklyCost = Math.min(prod.remainingCost, Math.ceil(prod.baseCost * .8 / prod.duration));
+        if (weeklyCost > 0) { prod.remainingCost -= weeklyCost; prod.paidCost += weeklyCost; recordTransaction(-weeklyCost, 'Direct project expense', `${prod.title}: ${prod.stage.toLowerCase()} costs`, prod.id); }
+        prod.progress++;
+        if (prod.progress === 2 && !prod.decision) addNews(`${prod.title} needs a production decision`, 'Choose whether to preserve the plan, rehearse, or sharpen audience positioning.', 'decision', prod.id, { page: 'productions', decision: prod.id });
+        const newStage = stageFor(prod.progress, prod.duration);
+        if (newStage !== prod.stage && prod.progress < prod.duration) { prod.stage = newStage; addNews(`${prod.title} enters ${newStage.toLowerCase()}`, 'Production Team A moved the project into its next scheduled stage.', 'studio', prod.id); }
+        if (prod.progress >= prod.duration) finishProduction(prod);
+      } else if (prod.status === 'Released') processReleaseRevenue(prod);
+    }
+    expireOffersAndLicenses(); scheduleOpportunity(false);
+    if (state.cash < state.weeklyOverhead * 5 && !state.news.some(n => n.week === state.week && n.title.includes('Cash warning'))) addNews('Cash warning: reserves are running low', 'Cash covers fewer than five weeks of overhead. Consider a no-cost office assignment.', 'finance');
+    if (state.week >= 52 && !state.firstYearComplete) { state.firstYearComplete = true; addNews('First-year milestone reached', `${state.studioName} survived its first year. Career goals and sandbox play continue.`, 'studio'); }
+    state.advancing = false; saveState(); render();
+    const decisionCount = state.news.length - beforeNews; const delta = state.cash - beforeCash;
+    showToast(`Week ${state.week}: ${decisionCount} update${decisionCount === 1 ? '' : 's'}, cash ${delta >= 0 ? '+' : ''}${money(delta)}.`);
+  }
+
+  function chooseProductionDecision(id, choice) {
+    const p = state.productions.find(x => x.id === id);
+    if (!p || p.status !== 'In Production' || p.decision || p.progress < 2) return;
+    const choices = {
+      preserve: { label: 'Keep the current plan', cost: 0, qualityBonus: 0, awarenessBonus: 0 },
+      rehearse: { label: 'Add focused rehearsal', cost: 12000, qualityBonus: 4, awarenessBonus: 0 },
+      audience: { label: 'Sharpen audience positioning', cost: 6000, qualityBonus: 0, awarenessBonus: 7 }
+    };
+    const selected = choices[choice]; if (!selected) return;
+    if (state.cash - selected.cost < state.weeklyOverhead * 2) return showToast('That choice would leave too little operating cash. The no-cost plan remains available.');
+    p.decision = { choice, ...selected, appliedWeek: state.week };
+    if (selected.cost) { p.totalCost += selected.cost; p.paidCost += selected.cost; recordTransaction(-selected.cost, 'Production decision', `${p.title}: ${selected.label}`, p.id); }
+    addNews(`${p.title}: decision recorded`, `${selected.label}. Cost ${money(selected.cost)}; future quality effect ${selected.qualityBonus ? `+${selected.qualityBonus}` : 'none'}; awareness effect ${selected.awarenessBonus ? `+${selected.awarenessBonus}` : 'none'}.`, 'decision', p.id);
+    saveState(); render();
+  }
+
+  function greenlight(form) {
+    if (state.team.busyProductionId || state.team.busyContractId) return showToast('Production Team A is already booked.');
+    const fd = new FormData(form); let title = fd.get('title').trim(); const format = fd.get('format'); const genre = fd.get('genre');
+    if (!state.progression.unlockedGenres.includes(genre)) return showToast('Choose this genre in Career Progress before using it.');
+    const budgetSize = fd.get('budget'); const concept = DATA.concepts.find(x => x.id === fd.get('concept')); const writer = DATA.talent.writers.find(x => x.id === fd.get('writer')); const director = DATA.talent.directors.find(x => x.id === fd.get('director')); const lead = DATA.talent.leads.find(x => x.id === fd.get('lead')); const marketingTier = fd.get('marketing');
+    const audience = fd.get('audience'); const emphasis = fd.get('emphasis');
+    if (!title) title = generateTitle(format, genre); if (!concept || !writer || !director || !lead) return showToast('Please complete every project field.');
+    if (!concept.genres.includes(genre)) return showToast('That story concept does not fit the selected genre.');
+    if (unrelatedTitleDuplicate(title) && !confirm(`Another unrelated project is already named "${title}". Use this title anyway?`)) return;
+    const baseCost = DATA.budgets[format][budgetSize]; const marketingCost = DATA.marketing[marketingTier]; const talentCost = writer.cost + director.cost + lead.cost; const initialProduction = Math.round(baseCost * .2); const dueNow = talentCost + marketingCost + initialProduction;
+    if (state.cash - dueNow < state.weeklyOverhead * 4) return showToast(`You need ${money(dueNow + state.weeklyOverhead * 4)} to fund this safely.`);
+    const id = nextId('prod'); const duration = ECONOMY.duration[format][budgetSize]; const awareness = clamp(18 + marketingCost / 1600 + lead.popularity * .35, 20, 88);
+    const preview = forecastProject({ format, genre, budgetSize, concept, marketingCost, writer, director, lead, baseCost, duration, awareness });
+    const prod = { id, title, format, genre, budgetSize, concept, marketingTier, marketingCost, baseCost, creativeBrief: { audience, emphasis }, talent: { writer, director, lead }, talentCost, totalCost: baseCost + talentCost + marketingCost, paidCost: dueNow, remainingCost: baseCost - initialProduction, duration, progress: 0, stage: 'Development', status: 'In Production', awareness: Math.round(awareness), lifetimeRevenue: 0, boxOfficeGross: 0, digitalGross: 0, startWeek: state.week, forecastLow: preview.lowRevenue, forecastHigh: preview.highRevenue };
+    state.productions.push(prod); state.titleGenerator.draft = null; state.team.busyProductionId = id;
+    recordTransaction(-talentCost, 'Direct project expense', `${title}: creative team contracts`, id); recordTransaction(-marketingCost, 'Direct project expense', `${title}: ${marketingTier.toLowerCase()} awareness campaign`, id); recordTransaction(-initialProduction, 'Direct project expense', `${title}: greenlight deposit and rented facilities`, id);
+    addNews(`${title} receives the greenlight`, `${format}, ${genre}; intended for ${audience} with emphasis on ${emphasis}.`, 'studio', id);
+    state.tutorialStep = Math.max(state.tutorialStep, 1); state.activePage = 'productions'; saveState(); render(); showToast(`${title} is greenlit.`);
+  }
+
+  function forecastProject(input) {
+    const people = [input.writer, input.director, input.lead]; const ability = people.reduce((s, p) => s + p.ability, 0) / 3; const fit = people.reduce((s, p) => s + (talentFits(p, input.genre) ? 100 : 58), 0) / 3; const reliability = people.reduce((s, p) => s + p.reliability, 0) / 3;
+    const quality = clamp(input.concept.strength * .31 + ability * .34 + fit * .2 + reliability * .15 + ({ Small: 0, Medium: 5, Large: 9 }[input.budgetSize]), 35, 96); const audienceScore = clamp(quality * .82 + input.awareness * .13, 30, 97); const preview = { format: input.format, baseCost: input.baseCost, audienceScore, awareness: input.awareness };
+    let expectedRevenue = 0; for (let w = 0; w < ECONOMY.release[input.format].earningWeeks; w++) expectedRevenue += releaseRevenueForWeek(preview, w).studioRevenue;
+    return { expectedRevenue, lowRevenue: Math.round(expectedRevenue * .78), highRevenue: Math.round(expectedRevenue * 1.22) };
+  }
+  function availableCash() { const committed = state.productions.filter(p => p.status === 'In Production').reduce((s, p) => s + p.remainingCost, 0); return Math.max(0, state.cash - committed - state.weeklyOverhead * ECONOMY.reserveWeeks); }
+
+  function pageHeader(kicker, title, body, action = '') { return `<header class="page-head"><div><span class="eyebrow">${kicker}</span><h1>${title}</h1><p>${body}</p></div>${action}</header>`; }
+  function renderSetup() { return `<main class="setup-shell"><section class="setup-card"><span class="eyebrow">A studio management game</span><h1>Screen<br><span class="accent">Empire</span></h1><p class="lede">Choose paid work, create originals, build experience, and grow a catalog one week at a time.</p><div class="choice-note"><strong>Your first week:</strong> plan an original or advance to Week 2 for a feasible paid opportunity. Optional work has clear terms and never pays just for appearing.</div><form id="setup-form" class="setup-form"><input name="studioName" aria-label="Production company name" maxlength="40" placeholder="Name your production company" required autofocus><button class="button" type="submit">Open the studio</button></form></section></main>`; }
+
+  function careerGoal() {
+    const goals = [];
+    if (!state.contracts.some(c => c.status === 'completed')) goals.push({ title: 'Complete your first paid job', text: 'Open Business Opportunities, accept a feasible assignment, and deliver it.' });
+    if (!state.catalog.length) goals.push({ title: 'Release your first original', text: 'A completed original earns 100 Studio Experience and your first genre choice.' });
+    if (state.progression.unlockedGenres.length > 3 && !state.productions.some(p => !BASE_GENRES.includes(p.genre))) goals.push({ title: 'Try a newly unlocked genre', text: 'Start an original using one of your chosen new capabilities.' });
+    if (state.catalog.length && !state.licenses.length) goals.push({ title: 'Make your first catalog deal', text: 'Watch Business Opportunities for a buyer or screening offer.' });
+    goals.push({ title: 'Build a sustainable slate', text: 'Balance client work, originals, and at least four weeks of overhead.' });
+    return goals[state.progression.selectedGoal % goals.length];
+  }
+  function progressCard() { const next = nextExperienceMilestone(); const goal = careerGoal(); return `<section class="card career-card"><div class="catalog-title"><div><span class="eyebrow">Career</span><h2>${esc(goal.title)}</h2></div><button class="button secondary small" data-action="change-goal">Change suggestion</button></div><p>${esc(goal.text)}</p><div class="summary-row"><span>Studio Experience</span><strong>${state.progression.experience}${next ? ` / ${next}` : ' / all milestones reached'}</strong></div><div class="summary-row"><span>Genre choices ready</span><strong>${state.progression.pendingGenreChoices}</strong></div><button class="button small" data-page="career">View career progress</button></section>`; }
+  function productionDecisionCard(p) { return `<section class="callout attention"><h3>${esc(p.title)} needs your decision</h3><p>Choose once. If you do nothing before release, the safe current plan is preserved automatically.</p><div class="decision-grid"><button class="decision-option" data-decision="preserve" data-production="${p.id}"><strong>Keep the current plan</strong><span>Cost $0. No extra quality or awareness effect.</span></button><button class="decision-option" data-decision="rehearse" data-production="${p.id}"><strong>Add focused rehearsal</strong><span>Cost $12,000 now. +4 future quality.</span></button><button class="decision-option" data-decision="audience" data-production="${p.id}"><strong>Sharpen audience positioning</strong><span>Cost $6,000 now. +7 future awareness.</span></button></div></section>`; }
+
+  function renderDashboard() {
+    const active = state.productions.find(p => p.status === 'In Production'); const decisions = state.productions.filter(p => p.status === 'In Production' && p.progress >= 2 && !p.decision); const open = openOffers(); const latest = state.news.slice(0, 4); const committed = state.productions.filter(p => p.status === 'In Production').reduce((s, p) => s + p.remainingCost, 0);
+    return `${pageHeader('Executive office', 'Dashboard', 'Review your next decisions, then advance the shared weekly clock.')}${state.progression.migrationRecap ? `<div class="callout"><h3>Save upgraded safely</h3><p>${esc(state.progression.migrationRecap)}</p><button class="button small" data-action="dismiss-migration">Got it</button></div>` : ''}<div class="grid two" style="margin-top:18px">${progressCard()}<section class="card"><span class="eyebrow">Your next decisions</span><h2>${open.length + decisions.length} item${open.length + decisions.length === 1 ? '' : 's'} ready</h2>${open.slice(0,2).map(o => `<p><strong>${esc(o.title)}</strong> â€” ${money(o.totalPayment)}, expires Week ${o.expiresWeek}. <button class="text-button" data-open-offer="${o.id}">View offer</button></p>`).join('') || '<p>No open offer right now. The Support panel explains the next market check.</p>'}${decisions.map(p => `<p><strong>${esc(p.title)}</strong> needs a production decision. <button class="text-button" data-page="productions">Choose now</button></p>`).join('')}</section></div><div class="grid three" style="margin-top:18px"><article class="card stat-card"><span class="metric-label">Cash in bank</span><strong>${money(state.cash)}</strong><span class="sub">Available now</span></article><article class="card stat-card"><span class="metric-label">Remaining commitments</span><strong>${money(committed)}</strong><span class="sub">Approved direct costs</span></article><article class="card stat-card"><span class="metric-label">Conservative spending room</span><strong>${money(availableCash())}</strong><span class="sub">After commitments + 4 weeks overhead</span></article></div><div class="grid two"><section><div class="section-title"><h2>Production floor</h2></div>${active ? productionCard(active) : `<div class="empty">Production Team A is available.<br><button class="button small" data-page="productions">Plan a production</button></div>`}</section><section><div class="section-title"><h2>Latest studio news</h2></div><div class="card">${latest.map(newsRow).join('')}</div></section></div>`;
+  }
+  function productionCard(p) { const percent = Math.min(100, Math.round(p.progress / p.duration * 100)); return `<article class="card production-card"><div><div class="catalog-title"><h3>${esc(p.title)}</h3><span class="tag">${p.status}</span></div><div class="production-meta"><span class="tag">${p.format}</span><span class="tag">${p.genre}</span><span class="tag">${p.stage}</span></div>${p.status === 'In Production' ? `<div class="progress" aria-label="${percent}% complete"><div style="width:${percent}%"></div></div><p>${p.progress} of ${p.duration} production weeks complete</p>` : `<p>Quality <span class="score">${p.quality}</span> Awareness <span class="score">${p.awareness}</span></p>`}</div><div class="money-stack"><span class="metric-label">Project spending</span><strong>${money(p.paidCost)}</strong><span class="muted">${money(p.remainingCost)} committed</span></div></article>`; }
+  function optionList(list) { return list.map(x => `<option value="${x.id}">${esc(x.name)} â€” ${esc((x.fits || [x.fit]).join(', '))} Â· Ability ${x.ability} Â· ${money(x.cost)}</option>`).join(''); }
+
+  function renderProductions() {
+    const active = state.productions.filter(p => p.status === 'In Production'); const released = state.productions.filter(p => p.status === 'Released'); const busy = !!(state.team.busyProductionId || state.team.busyContractId); const draft = busy ? { title: '', format: 'Movie', genre: state.progression.unlockedGenres[0] } : ensureTitleDraft(); const selectedGenre = state.progression.unlockedGenres.includes(draft.genre) ? draft.genre : state.progression.unlockedGenres[0];
+    const genreOptions = allGenreNames.map(g => `<option value="${g}" ${selectedGenre === g ? 'selected' : ''} ${state.progression.unlockedGenres.includes(g) ? '' : 'disabled'}>${g}${state.progression.unlockedGenres.includes(g) ? '' : ' â€” locked'}</option>`).join('');
+    const conceptOptions = DATA.concepts.filter(c => c.genres.includes(selectedGenre)).map(c => `<option value="${c.id}">${esc(c.name)} â€” ${esc(c.note)}</option>`).join('');
+    return `${pageHeader('Production office', 'Productions', 'Create studio-owned movies and television seasons. Locked genres remain visible so progress is never hidden.')}${active.filter(p => p.progress >= 2 && !p.decision).map(productionDecisionCard).join('')}${active.length ? `<div class="grid">${active.map(productionCard).join('')}</div>` : ''}<div class="section-title"><h2>Greenlight an original</h2><span class="tag">Studio-owned rights</span></div><form id="greenlight-form" class="card form-grid"><div class="field full"><label for="title">Project title</label><div class="title-row"><input id="title" name="title" maxlength="48" value="${esc(draft.title)}" placeholder="A title will be generated automatically" ${busy ? 'disabled' : ''}><button class="text-button" id="generate-title" type="button" ${busy ? 'disabled' : ''}>Generate Another Title</button></div></div><div class="field"><label for="format">Format</label><select id="format" name="format" ${busy ? 'disabled' : ''}><option ${draft.format === 'Movie' ? 'selected' : ''}>Movie</option><option ${draft.format === 'TV Season' ? 'selected' : ''}>TV Season</option></select></div><div class="field"><label for="genre">Genre</label><select id="genre" name="genre" ${busy ? 'disabled' : ''}>${genreOptions}</select><span class="field-help">${esc(GENRES[selectedGenre].strength)}. Trade-off: ${esc(GENRES[selectedGenre].tradeoff)}.</span></div><div class="field full"><label for="concept">Central conflict</label><select id="concept" name="concept" ${busy ? 'disabled' : ''}>${conceptOptions}</select></div><div class="field"><label for="audience">Intended audience</label><select id="audience" name="audience" ${busy ? 'disabled' : ''}><option>broad entertainment</option><option>genre enthusiasts</option><option>prestige-oriented viewers</option></select></div><div class="field"><label for="emphasis">Creative emphasis</label><select id="emphasis" name="emphasis" ${busy ? 'disabled' : ''}><option>characters</option><option>tension</option><option>humor</option><option>spectacle</option></select></div><div class="field"><label for="budget">Production budget</label><select id="budget" name="budget" ${busy ? 'disabled' : ''}><option>Small</option><option>Medium</option><option>Large</option></select></div><div class="field"><label for="marketing">Awareness campaign</label><select id="marketing" name="marketing" ${busy ? 'disabled' : ''}><option>Lean</option><option>Standard</option><option>Strong</option></select></div><div class="field full"><label for="writer">Writer / researcher</label><select id="writer" name="writer" ${busy ? 'disabled' : ''}>${optionList(DATA.talent.writers)}</select></div><div class="field full"><label for="director">Director / editor</label><select id="director" name="director" ${busy ? 'disabled' : ''}>${optionList(DATA.talent.directors)}</select></div><div class="field full"><label for="lead">Lead performer / presenter</label><select id="lead" name="lead" ${busy ? 'disabled' : ''}>${optionList(DATA.talent.leads)}</select></div><div id="project-summary" class="summary-box"></div><div class="field full"><button class="button" type="submit" ${busy ? 'disabled' : ''}>${busy ? 'Team is currently booked' : 'Greenlight production'}</button></div></form>${released.length ? `<div class="section-title"><h2>Completed</h2></div><div class="grid">${released.map(productionCard).join('')}</div>` : ''}`;
+  }
+
+  function updateProjectSummary() {
+    const form = document.querySelector('#greenlight-form'); const box = document.querySelector('#project-summary'); if (!form || !box || !form.elements.namedItem('format') || form.elements.namedItem('format').disabled) return;
+    const field = n => form.elements.namedItem(n); const format = field('format').value; const genre = field('genre').value; const budgetSize = field('budget').value; const baseCost = DATA.budgets[format][budgetSize]; const marketingCost = DATA.marketing[field('marketing').value]; const writer = DATA.talent.writers.find(x => x.id === field('writer').value); const director = DATA.talent.directors.find(x => x.id === field('director').value); const lead = DATA.talent.leads.find(x => x.id === field('lead').value); const concept = DATA.concepts.find(x => x.id === field('concept').value); if (!concept) return;
+    const talentCost = writer.cost + director.cost + lead.cost; const directCost = baseCost + talentCost + marketingCost; const duration = ECONOMY.duration[format][budgetSize]; const awareness = clamp(18 + marketingCost / 1600 + lead.popularity * .35, 20, 88); const forecast = forecastProject({ format, genre, budgetSize, concept, marketingCost, writer, director, lead, baseCost, duration, awareness }); const overhead = duration * state.weeklyOverhead;
+    box.innerHTML = `<div class="summary-row"><span>Due when approved</span><strong>${money(talentCost + marketingCost + baseCost * .2)}</strong></div><div class="summary-row"><span>Remaining committed production costs</span><strong>${money(baseCost * .8)}</strong></div><div class="summary-row"><span>Total direct project cost</span><strong>${money(directCost)}</strong></div><div class="summary-row"><span>Estimated production time</span><strong>${duration} weeks</strong></div><div class="summary-row"><span>Planning overhead allocation (not charged twice)</span><strong>${money(overhead)}</strong></div><div class="summary-row"><span>Estimated studio revenue (uncertain)</span><strong>${money(forecast.lowRevenue)}â€“${money(forecast.highRevenue)}</strong></div><div class="summary-row"><span>Estimated result after allocated overhead</span><strong>${money(forecast.lowRevenue - directCost - overhead)} to ${money(forecast.highRevenue - directCost - overhead)}</strong></div><p class="muted">Forecast only. Finished quality, awareness, audience fit, and commercial revenue are separate measures.</p>`;
+  }
+  function updateDraftForSelection(form) {
+    const title = form.elements.namedItem('title'); const format = form.elements.namedItem('format').value; const genre = form.elements.namedItem('genre').value; const draft = ensureTitleDraft(format, genre);
+    if (draft.source === 'generated' && (draft.format !== format || draft.genre !== genre)) { draft.title = generateTitle(format, genre, draft.title); title.value = draft.title; }
+    draft.format = format; draft.genre = genre;
+    if (form.elements.namedItem('concept')) form.elements.namedItem('concept').innerHTML = DATA.concepts.filter(c => c.genres.includes(genre)).map(c => `<option value="${c.id}">${esc(c.name)} â€” ${esc(c.note)}</option>`).join('');
+    saveState();
+  }
+  function generateAnotherDraftTitle(form) { const input = form.elements.namedItem('title'); const format = form.elements.namedItem('format').value; const genre = form.elements.namedItem('genre').value; const draft = ensureTitleDraft(format, genre); if (draft.source === 'manual' && input.value.trim() && !confirm('Replace your manually entered title with a generated suggestion?')) return; draft.title = generateTitle(format, genre, input.value); draft.source = 'generated'; draft.format = format; draft.genre = genre; input.value = draft.title; saveState(); }
+
+  function opportunityCard(o) {
+    const p = o.productionId ? state.productions.find(x => x.id === o.productionId) : null; const active = o.status === 'open';
+    return `<article class="card offer-card" id="offer-${o.id}"><div class="catalog-title"><div><span class="eyebrow">${esc(o.type.replaceAll('-', ' '))}</span><h2>${esc(o.title)}</h2></div><span class="tag ${o.status}">${o.status}</span></div><p>${esc(o.description)}</p>${p ? `<p><strong>Included title:</strong> ${esc(p.title)} (${p.format}, ${p.genre})</p>` : ''}<div class="grid two compact"><div class="summary-row"><span>Total payment</span><strong>${money(o.totalPayment)}</strong></div><div class="summary-row"><span>Advance / delivery</span><strong>${money(o.advance)} / ${money(o.deliveryPayment)}</strong></div><div class="summary-row"><span>Direct costs</span><strong>${money(o.directCost)}</strong></div><div class="summary-row"><span>Capacity</span><strong>${o.capacity === 'team' ? 'Production team' : o.capacity === 'office' ? 'One office action' : 'No filming slot'}</strong></div><div class="summary-row"><span>Created</span><strong>Week ${o.createdWeek}</strong></div><div class="summary-row"><span>Expires</span><strong>Week ${o.expiresWeek}</strong></div></div>${o.type === 'streaming-license' ? `<p class="muted">26-week exclusive subscription-streaming right for this title only. Theatrical, purchase, rental, screening, sequel, and future-season rights stay with you.</p>` : ''}${o.counterResult ? `<p class="callout-inline">${esc(o.counterResult)}</p>` : ''}${active ? `<div class="button-row"><button class="button small" data-accept-offer="${o.id}">Accept</button><button class="button secondary small" data-decline-offer="${o.id}">Decline</button>${o.type === 'streaming-license' && !o.countered ? `<button class="button secondary small" data-counter-offer="${o.id}">Counter +10%</button>` : ''}</div>` : `<p class="muted">Final status: ${o.status}${o.paymentStatus ? ` Â· payment ${o.paymentStatus}` : ''}.</p>`}</article>`;
+  }
+  function renderBusiness() { const items = [...state.opportunities].sort((a,b) => b.createdWeek - a.createdWeek); const activeContracts = state.contracts.filter(c => c.status === 'active'); return `${pageHeader('Client desk', 'Business Opportunities', 'Optional paid work and catalog deals with saved terms, deadlines, and payment records.', `<span class="tag">${openOffers().length} open</span>`)}${activeContracts.length ? `<div class="callout"><h3>Work in progress</h3>${activeContracts.map(c => `<p>${esc(c.title)} for ${esc(c.client)}: ${c.weeksRemaining} week${c.weeksRemaining === 1 ? '' : 's'} remaining, ${money(c.deliveryPayment)} due on delivery.</p>`).join('')}</div>` : ''}<div class="grid two" style="margin-top:18px">${items.length ? items.map(opportunityCard).join('') : '<div class="empty">Your first practical offer arrives by Week 2.</div>'}</div>`; }
+
+  function releaseReport(p) { const r = p.releaseReport; if (!r) return ''; const forecast = p.lifetimeRevenue < r.forecastLow ? 'below the planning range so far' : p.lifetimeRevenue > r.forecastHigh ? 'above the planning range' : 'within the planning range'; return `<section class="release-report"><h3>${r.preliminary ? 'Preliminary release report' : 'Lifetime release report'}</h3><p><strong>What worked:</strong> ${esc(r.worked)}</p><p><strong>What held it back:</strong> ${esc(r.heldBack)}</p><p><strong>Forecast comparison:</strong> ${money(p.lifetimeRevenue)} received; ${forecast}. ${r.preliminary ? 'Revenue is still arriving, so this is not lifetime profit.' : 'The original release window is complete.'}</p><p><strong>Studio Experience:</strong> +${r.experience || 0} at completion. Current total ${state.progression.experience}${nextExperienceMilestone() ? `; next choice at ${nextExperienceMilestone()}` : ''}.</p></section>`; }
+  function renderCatalog() { const catalog = state.catalog.map(id => state.productions.find(p => p.id === id)).filter(Boolean); return `${pageHeader('Library & rights', 'Catalog & Rights', 'Finished titles, release reports, active licenses, and retained rights.')}${catalog.length ? `<div class="grid two">${catalog.map(p => { const licenses = state.licenses.filter(l => l.productionId === p.id); return `<article class="card"><div class="catalog-title"><div><h2>${esc(p.title)}</h2><div class="production-meta"><span class="tag">Studio owned</span><span class="tag">${p.format}</span><span class="tag">${p.genre}</span></div></div><span class="score">${p.audienceScore}</span></div><div class="summary-row"><span>Quality / awareness</span><strong>${p.quality} / ${p.awareness}</strong></div><div class="summary-row"><span>Lifetime studio revenue</span><strong>${money(p.lifetimeRevenue)}</strong></div><div class="summary-row"><span>Total direct cost</span><strong>${money(p.totalCost)}</strong></div><div class="summary-row"><span>Direct project result</span><strong class="${p.lifetimeRevenue - p.totalCost >= 0 ? 'good' : 'bad'}">${money(p.lifetimeRevenue - p.totalCost)}</strong></div>${releaseReport(p)}${licenses.map(l => `<div class="license"><strong>${esc(l.buyer)}</strong><br>${esc(l.rights)} Â· ${l.exclusive ? 'Exclusive' : 'Nonexclusive'} Â· Week ${l.startWeek}â€“${l.endWeek} Â· ${l.status}<br><span class="muted">Retained: ${esc(l.retained)}</span></div>`).join('')}</article>`; }).join('')}</div>` : '<div class="empty">Finished studio-owned productions will appear here permanently.</div>'}`; }
+  function renderCareer() { const next = nextExperienceMilestone(); const remaining = allGenreNames.filter(g => !state.progression.unlockedGenres.includes(g)); return `${pageHeader('Studio growth', 'Career Progress', 'Experience comes from completed work. Genre choices are never purchased with cash.')}${progressCard()}<div class="section-title"><h2>Genre capability</h2><span class="tag">${state.progression.unlockedGenres.length} of ${allGenreNames.length} available</span></div>${state.progression.pendingGenreChoices ? `<div class="callout"><h3>Choose any new genre</h3><p>${state.progression.pendingGenreChoices} choice${state.progression.pendingGenreChoices === 1 ? '' : 's'} ready. Your selection works immediately.</p><div class="button-row">${remaining.map(g => `<button class="button small" data-unlock-genre="${g}">${g}</button>`).join('')}</div></div>` : `<div class="callout"><h3>Next genre choice</h3><p>${next ? `${state.progression.experience} / ${next} experience. Complete work to earn ${next - state.progression.experience} more.` : 'All genre milestones reached.'}</p></div>`}<div class="grid three" style="margin-top:18px">${allGenreNames.map(g => `<article class="card"><div class="catalog-title"><h3>${g}</h3><span class="tag">${state.progression.unlockedGenres.includes(g) ? 'Available' : 'Locked'}</span></div><p>${esc(GENRES[g].strength)}</p><p class="muted">Trade-off: ${esc(GENRES[g].tradeoff)}</p><p class="muted">${DATA.concepts.filter(c => c.genres.includes(g)).length} starting concepts Â· ${titleCandidates('Movie', g).length} movie titles Â· ${titleCandidates('TV Season', g).length} TV titles</p></article>`).join('')}</div>`; }
+  function renderFinances() { const committed = state.productions.filter(p => p.status === 'In Production').reduce((s,p) => s + p.remainingCost, 0); return `${pageHeader('The books', 'Finances', 'Every charge and payment is recorded once, with its project or event reference.')}` + `<div class="grid three"><article class="card stat-card"><span class="metric-label">Cash</span><strong>${money(state.cash)}</strong></article><article class="card stat-card"><span class="metric-label">Committed costs</span><strong>${money(committed)}</strong></article><article class="card stat-card"><span class="metric-label">Weekly overhead</span><strong>${money(state.weeklyOverhead)}</strong></article></div><div class="section-title"><h2>Transaction history</h2></div><div class="card">${state.transactions.length ? state.transactions.map(tx => `<div class="ledger-row"><div><strong>${esc(tx.category)}</strong><div class="detail">Week ${tx.week} Â· ${esc(tx.detail)}${tx.eventId ? ` Â· ${tx.eventId}` : ''}</div></div><strong class="${tx.amount >= 0 ? 'good' : 'bad'}">${tx.amount >= 0 ? '+' : ''}${money(tx.amount)}</strong></div>`).join('') : '<p>No transactions yet.</p>'}</div>`; }
+  function newsRow(item) { return `<article class="news-row ${item.read ? '' : 'unread'}"><div><h3>${esc(item.title)}</h3><p>${esc(item.text)}</p>${item.action ? `<button class="text-button" data-news-action="${item.id}">${item.action.offer ? 'View offer' : item.action.decision ? 'Make decision' : item.action.report ? 'View report' : 'Open'}</button>` : ''}</div><time>Week ${item.week}</time></article>`; }
+  function renderNews() { return `${pageHeader('Industry wire', 'News', 'Actionable saved events. Reading a story never pays money or advances time.')}<div class="card">${state.news.map(newsRow).join('')}</div>`; }
+  function renderSettings() { return `${pageHeader('Local game data', 'Save, Settings & Support', 'Autosaves live in this browser on this device. Export a backup when moving devices.')}<div class="grid two"><div class="card"><h2>Protect your progress</h2><p>Import validates a file and backs up the current save before replacing it.</p><div class="button-row"><button class="button secondary" id="export-save">Export Save</button><button class="button secondary" id="import-save">Import Save</button><button class="button danger" id="reset-game">Reset Game</button></div></div><div class="card"><h2>Support panel</h2><div class="summary-row"><span>Build version</span><strong>${BUILD_VERSION}</strong></div><div class="summary-row"><span>Save version</span><strong>${state.version}</strong></div><div class="summary-row"><span>Last opportunity check</span><strong>Week ${state.opportunityClock.lastCheckWeek}</strong></div><div class="summary-row"><span>Next normal check</span><strong>Week ${state.opportunityClock.nextCheckWeek}</strong></div><p class="muted"><strong>Latest scheduler note:</strong> ${esc(state.opportunityClock.skipReason)}</p></div></div>`; }
+  function renderPage() { return ({ dashboard: renderDashboard, productions: renderProductions, business: renderBusiness, catalog: renderCatalog, career: renderCareer, finances: renderFinances, news: renderNews, settings: renderSettings }[state.activePage] || renderDashboard)(); }
+
+  function render() {
+    const app = document.querySelector('#app'); if (!state.studioName) { app.innerHTML = renderSetup(); bindEvents(); return; }
+    const nav = [['dashboard','Dashboard'],['productions','Productions'],['business',`Opportunities${openOffers().length ? ` (${openOffers().length})` : ''}`],['catalog','Catalog & Rights'],['career','Career Progress'],['finances','Finances'],['news',`News${state.news.filter(n => !n.read).length ? ` (${state.news.filter(n => !n.read).length})` : ''}`],['settings','Save & Support']]; const year = Math.floor((state.week - 1) / 52) + 1; const weekOfYear = ((state.week - 1) % 52) + 1;
+    app.innerHTML = `<div class="game-shell"><aside class="sidebar"><div class="brand"><div class="brand-mark">SCREEN <span>EMPIRE</span></div><div class="studio-label">${esc(state.studioName)}</div></div><nav class="nav" aria-label="Main navigation">${nav.map(([id,label]) => `<button class="${state.activePage === id ? 'active' : ''}" data-page="${id}">${label}</button>`).join('')}</nav><div class="save-note">Autosaved in this browser</div></aside><div class="workspace"><header class="topbar"><div class="clock"><div><span class="metric-label">Studio calendar</span><span class="metric-value">Year ${year} Â· Week ${weekOfYear}</span></div><div><span class="metric-label">Cash</span><span class="metric-value ${state.cash < 50000 ? 'bad' : ''}">${money(state.cash)}</span></div><div><span class="metric-label">Experience</span><span class="metric-value">${state.progression.experience}</span></div></div><button class="button" id="next-week">Next Week â†’</button></header><main class="main">${renderPage()}</main></div></div>`;
+    bindEvents(); updateProjectSummary();
+  }
+
+  function exportSave() { const blob = new Blob([JSON.stringify({ ...state, advancing: false }, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `screen-empire-${state.studioName.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-week-${state.week}.json`; a.click(); URL.revokeObjectURL(url); showToast('Save exported to your Downloads folder.'); }
+  function importSave(file) { const reader = new FileReader(); reader.onload = () => { try { const parsed = JSON.parse(reader.result); if (!parsed || typeof parsed.studioName !== 'string' || !Number.isFinite(parsed.week) || !Number.isFinite(parsed.cash) || !Array.isArray(parsed.productions)) throw new Error('missing required game data'); const current = localStorage.getItem(SAVE_KEY); if (current) localStorage.setItem(BACKUP_KEY, current); state = migrateState(parsed); saveState(); render(); showToast('Save imported and previous save backed up.'); } catch (e) { showToast(`Import failed: ${e.message}.`); } }; reader.readAsText(file); }
+
+  function bindEvents() {
+    document.querySelector('#setup-form')?.addEventListener('submit', e => { e.preventDefault(); state.studioName = new FormData(e.currentTarget).get('studioName').trim(); if (!state.studioName) return; recordTransaction(ECONOMY.startingCash, 'Starting capital', 'Founder funding deposited'); state.cash = ECONOMY.startingCash; saveState(); render(); });
+    document.querySelectorAll('[data-page]').forEach(b => b.addEventListener('click', () => { state.activePage = b.dataset.page; if (state.activePage === 'news') state.news.forEach(n => { n.read = true; }); saveState(); render(); }));
+    document.querySelector('#next-week')?.addEventListener('click', e => { e.currentTarget.disabled = true; advanceWeek(); });
+    const form = document.querySelector('#greenlight-form'); form?.addEventListener('submit', e => { e.preventDefault(); greenlight(e.currentTarget); }); form?.addEventListener('change', e => { if (e.target.name === 'format' || e.target.name === 'genre') updateDraftForSelection(form); updateProjectSummary(); });
+    form?.elements.namedItem('title')?.addEventListener('input', e => { const draft = ensureTitleDraft(form.elements.namedItem('format').value, form.elements.namedItem('genre').value); draft.title = e.target.value; draft.source = 'manual'; saveState(); });
+    document.querySelector('#generate-title')?.addEventListener('click', () => generateAnotherDraftTitle(form));
+    document.querySelectorAll('[data-decision]').forEach(b => b.addEventListener('click', () => chooseProductionDecision(b.dataset.production, b.dataset.decision)));
+    document.querySelectorAll('[data-accept-offer]').forEach(b => b.addEventListener('click', () => acceptOpportunity(b.dataset.acceptOffer)));
+    document.querySelectorAll('[data-decline-offer]').forEach(b => b.addEventListener('click', () => declineOpportunity(b.dataset.declineOffer)));
+    document.querySelectorAll('[data-counter-offer]').forEach(b => b.addEventListener('click', () => counterOpportunity(b.dataset.counterOffer)));
+    document.querySelectorAll('[data-open-offer]').forEach(b => b.addEventListener('click', () => { state.activePage = 'business'; saveState(); render(); document.querySelector(`#offer-${b.dataset.openOffer}`)?.scrollIntoView(); }));
+    document.querySelectorAll('[data-news-action]').forEach(b => b.addEventListener('click', () => { const n = state.news.find(x => x.id === b.dataset.newsAction); if (!n?.action) return; n.read = true; state.activePage = n.action.page; saveState(); render(); if (n.action.offer) document.querySelector(`#offer-${n.action.offer}`)?.scrollIntoView(); }));
+    document.querySelectorAll('[data-unlock-genre]').forEach(b => b.addEventListener('click', () => unlockGenre(b.dataset.unlockGenre)));
+    document.querySelectorAll('[data-action="change-goal"]').forEach(b => b.addEventListener('click', () => { state.progression.selectedGoal++; saveState(); render(); }));
+    document.querySelector('[data-action="dismiss-migration"]')?.addEventListener('click', () => { state.progression.migrationRecap = null; saveState(); render(); });
+    document.querySelector('#export-save')?.addEventListener('click', exportSave); document.querySelector('#import-save')?.addEventListener('click', () => document.querySelector('#save-file').click());
+    document.querySelector('#reset-game')?.addEventListener('click', () => { if (confirm('Reset Screen Empire? Export first if you want to keep this studio.')) { localStorage.setItem(BACKUP_KEY, JSON.stringify(state)); localStorage.removeItem(SAVE_KEY); state = defaultState(); render(); } });
+  }
+  function showToast(message) { const toast = document.querySelector('#toast'); toast.textContent = message; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2800); }
+  document.querySelector('#save-file').addEventListener('change', e => { if (e.target.files[0]) importSave(e.target.files[0]); e.target.value = ''; });
+  render();
+  window.ScreenEmpireTest = { defaultState, stageFor, deterministicNoise, migrateState, normalizeTitle, titleCandidates, generateTitle, continuationTitle, releaseRevenueForWeek, scheduleOpportunity, eligibleOpportunityTemplates, EXPERIENCE_MILESTONES, ECONOMY, DATA, GENRES };
+})();
