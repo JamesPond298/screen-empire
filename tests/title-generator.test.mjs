@@ -4,7 +4,7 @@ import path from 'node:path';
 import { JSDOM } from 'jsdom';
 
 const root = path.resolve(import.meta.dirname, '..');
-const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace('<script src="game.js"></script>', '');
+const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace(/<script src="game\.js[^\"]*"><\/script>/, '');
 const gameCode = fs.readFileSync(path.join(root, 'game.js'), 'utf8');
 
 function openGame(saved = null) {
