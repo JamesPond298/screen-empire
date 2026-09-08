@@ -122,6 +122,24 @@ input:focus, select:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgb
 .callout { padding: 18px 20px; border: 1px solid rgba(255,184,77,.28); border-radius: 14px; background: rgba(255,184,77,.07); }
 .callout h3 { margin: 0 0 6px; }
 .callout p { margin: 0; }
+.callout .button-row { margin-top: 14px; }
+.callout-inline { padding: 10px 12px; border-left: 3px solid var(--cyan); background: rgba(66,211,200,.07); }
+.attention { margin-bottom: 18px; border-color: rgba(66,211,200,.35); background: rgba(66,211,200,.07); }
+.decision-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin-top: 14px; }
+.decision-option { min-height: 100px; padding: 14px; border: 1px solid #38516e; border-radius: 11px; color: var(--ink); background: #0b1524; text-align: left; }
+.decision-option:hover { border-color: var(--cyan); transform: translateY(-1px); }
+.decision-option strong, .decision-option span { display: block; }
+.decision-option span { margin-top: 6px; color: var(--muted); font-size: .78rem; }
+.compact { gap: 0 18px; }
+.offer-card { scroll-margin-top: 110px; }
+.offer-card .tag.open { color: #111722; background: var(--amber); }
+.offer-card .tag.completed { color: #0b281d; background: var(--green); }
+.offer-card .tag.expired, .offer-card .tag.declined { color: #ffdada; background: rgba(255,114,114,.18); }
+.news-row.unread { margin-inline: -10px; padding-inline: 10px; border-left: 3px solid var(--amber); background: rgba(255,184,77,.04); }
+.career-card { border-color: rgba(255,184,77,.35); }
+.release-report { margin-top: 16px; padding: 15px; border-radius: 12px; background: #0b1524; }
+.release-report h3 { color: var(--cyan); }
+.license { margin-top: 12px; padding: 12px; border: 1px solid #38516e; border-radius: 10px; background: rgba(66,211,200,.05); }
 .news-row time { white-space: nowrap; color: var(--amber); font-size: .76rem; font-weight: 800; }
 .news-row h3 { margin: 0 0 3px; font-size: .95rem; }
 .news-row p { margin: 0; font-size: .84rem; }
@@ -158,4 +176,5 @@ input:focus, select:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgb
   .setup-form { flex-direction: column; }
   .title-row { align-items: stretch; flex-direction: column; }
   .text-button { align-self: flex-start; }
+  .decision-grid { grid-template-columns: 1fr; }
 }

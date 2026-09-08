@@ -1,5 +1,16 @@
 # Screen Empire project checklist
 
+## Implemented — Opportunity & progression update
+
+- Persistent Business Opportunities board with saved IDs, deadlines, eligibility, accept/decline states, and transaction references.
+- Week 2 introductory offer, normal 3–5 week cadence, six-week maximum eligible wait, three-offer board limit, and visible scheduler diagnostics.
+- Six opportunity types: local commercial, paid script assessment, streaming license, paid screening, returning-client commission, and catalog rediscovery.
+- Team capacity, one weekly office-action slot, client contracts, delivery payments, three fictional buyers, rights validation, fixed license terms, and bounded counteroffers.
+- Studio Experience, nine player-chosen genre milestones, retroactive completion credit for existing saves, and one-time migration recap.
+- Twelve visible genres with three concepts each, affordable compatible talent, trade-offs, audience interests, and movie/TV title generation.
+- Compact audience/emphasis creative brief, one saved production decision, and preliminary/final release reports generated from real project inputs.
+- Career goals, Dashboard decision list, actionable News, unread counts, week summaries, and a read-only Support panel.
+
 ## Implemented — Stage 1 foundation
 
 - Studio naming and beginner opening explanation.
@@ -35,12 +46,10 @@
 ## Known limitations
 
 - Stage 1 uses one production team and rented facilities only.
-- Paid client work is intentionally reserved for Stage 2.
-- Streaming licensing, negotiations, buyer market, and expanded News filters are reserved for Stage 3 onward.
 - Browser saves remain on one browser/device unless exported.
-- Final visual review in Edge or Chrome remains a manual check because the protected preview could not open a local-file URL.
-- Contract, event, and loan strategies cannot be simulated until their later update stages exist.
+- Talent development, television continuity, hybrid-genre mastery, rivals, festivals, awards, expansion, and optional loans remain future releases.
+- Streaming deals intentionally use a compact fixed-term model rather than a full historical market simulation.
 
 ## Next stage
 
-Economy overhaul Stage 2: positive business opportunities with eligibility, expiration, saved IDs, News links, and one-time payment tracking. Paid client contracts will be introduced through that work.
+Talent development and television continuity are the next planned depth release. They are not labeled as playable yet.

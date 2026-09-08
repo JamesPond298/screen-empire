@@ -4,7 +4,7 @@
   "private": true,
   "description": "A browser-based television and movie studio simulator.",
   "scripts": {
-    "test": "node tests/stage1.test.mjs && node tests/title-generator.test.mjs && node tests/economy-simulation.test.mjs"
+    "test": "node tests/stage1.test.mjs && node tests/title-generator.test.mjs && node tests/opportunities-progression.test.mjs && node tests/gameplay-simulation.test.mjs && node tests/economy-simulation.test.mjs"
   },
   "devDependencies": {
     "jsdom": "^30.0.1"

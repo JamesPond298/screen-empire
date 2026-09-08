@@ -87,7 +87,7 @@ assert.equal(reloadSave.productions[0].criticScore, criticScore, 'reload does no
 assert.match(reloaded.window.document.body.textContent, /Midnight Detour/, 'saved production renders after reload');
 
 const migrated = reloaded.window.ScreenEmpireTest.migrateState({ studioName: 'Old Save', week: 4, cash: 100000, productions: [], version: 0 });
-assert.equal(migrated.version, 3);
+assert.equal(migrated.version, 4);
 assert.ok(Array.isArray(migrated.news));
 assert.equal(migrated.weeklyOverhead, 6000, 'older saves receive the improved future overhead without changing history');
 assert.equal(migrated.titleGenerator.draft, null, 'older saves receive generator defaults without changing productions');
